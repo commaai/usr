@@ -1,0 +1,1327 @@
+Package: libx265
+Status: install ok installed
+Installed-Size: 760
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.6
+Description: H.265/HEVC video stream encoder library
+Homepage: http://x265.org/
+
+Package: libtool
+Status: install ok installed
+Installed-Size: 2256
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.4.6-5
+Replaces: libtool-dev
+Depends: bash, grep, sed, libltdl
+Conflicts: libtool-dev
+Description: Generic library support script hiding the complexity of using shared libraries behind a consistent, portable interface
+Homepage: https://www.gnu.org/software/libtool/
+
+Package: libgmp-dev
+Status: install ok installed
+Installed-Size: 112
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 6.1.2
+Depends: libgmp
+Description: Development files for libgmp
+Homepage: https://gmplib.org/
+
+Package: libnghttp2
+Status: install ok installed
+Installed-Size: 152
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.31.1
+Description: nghttp HTTP 2.0 library
+Homepage: https://nghttp2.org/
+
+Package: libx264-dev
+Status: install ok installed
+Installed-Size: 92
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 20180211
+Depends: libx264
+Description: Development files for libx264
+Homepage: https://www.videolan.org/developers/x264.html
+
+Package: libcairo
+Status: install ok installed
+Installed-Size: 916
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.14.12
+Depends: libandroid-support, libpixman, fontconfig, freetype, libpng
+Description: Cairo 2D vector graphics library
+Homepage: https://cairographics.org
+
+Package: libgfortran
+Status: install ok installed
+Installed-Size: 1504
+Maintainer: its-pointless @github
+Architecture: aarch64
+Version: 6.3.0
+Description: dynamic library for fortran
+Homepage: http://gcc.gnu.org/
+
+Package: libvpx
+Status: install ok installed
+Installed-Size: 1148
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.6.1-1
+Description: VP8 & VP9 Codec SDK
+Homepage: https://www.webmproject.org
+
+Package: libmpfr
+Status: install ok installed
+Installed-Size: 400
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 4.0.1
+Depends: libgmp
+Description: C library for multiple-precision floating-point computations with correct rounding
+Homepage: http://www.mpfr.org/
+
+Package: liblua
+Status: install ok installed
+Installed-Size: 208
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 5.3.4-3
+Replaces: libluajit
+Conflicts: libluajit
+Description: Shared library for the Lua interpreter
+Homepage: https://www.lua.org/
+
+Package: strace
+Status: install ok installed
+Installed-Size: 948
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 4.20
+Description: Debugging utility to monitor the system calls used by a program and all the signals it receives
+Homepage: https://strace.io/
+
+Package: liblzma
+Status: install ok installed
+Installed-Size: 152
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 5.2.4
+Description: XZ-format compression library
+Homepage: https://tukaani.org/xz/
+
+Package: apr-util
+Status: install ok installed
+Installed-Size: 164
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.6.1
+Depends: apr, libexpat
+Description: Apache Portable Runtime Utility Library
+Homepage: https://apr.apache.org/
+
+Package: libpopt
+Status: install ok installed
+Installed-Size: 64
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.16-2
+Depends: libandroid-glob
+Description: Library for parsing cmdline parameters
+Homepage: http://www.linuxfromscratch.org/blfs/view/svn/general/popt.html
+
+Package: libcompiler-rt
+Status: install ok installed
+Installed-Size: 15420
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 6.0.0
+Description: Tools for zmodem/xmodem/ymodem file transfer
+Homepage: https://ohse.de/uwe/software/lrzsz.html
+
+Package: less
+Status: install ok installed
+Installed-Size: 292
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 530-1
+Depends: ncurses, pcre
+Description: Terminal pager program used to view the contents of a text file one screen at a time
+Homepage: http://www.greenwoodsoftware.com/less/
+
+Package: clang
+Status: install ok installed
+Installed-Size: 59720
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 6.0.0-2
+Depends: libllvm
+Description: C language frontend for LLVM
+Homepage: https://clang.llvm.org/
+
+Package: make
+Status: install ok installed
+Installed-Size: 240
+Maintainer: Fredrik Fornwall <fredrik@fornwall.net>
+Architecture: aarch64
+Version: 4.2.1
+Description: Tool which controls the generation of executables and other non-source files of a program from the program's source files
+Homepage: http://www.gnu.org/software/make/
+
+Package: libjpeg-turbo-dev
+Status: install ok installed
+Installed-Size: 196
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.5.3
+Depends: libjpeg-turbo
+Description: Development files for libjpeg-turbo
+Homepage: http://libjpeg-turbo.virtualgl.org/
+
+Package: libutil
+Status: install ok installed
+Installed-Size: 36
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.3
+Description: Library with terminal functions
+Homepage: https://refspecs.linuxbase.org/LSB_2.1.0/LSB-generic/LSB-generic/libutil.html
+
+Package: grep
+Status: install ok installed
+Installed-Size: 252
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.1
+Depends: pcre
+Description: Command which searches one or more input files for lines containing a match to a specified pattern
+Homepage: https://www.gnu.org/software/grep/
+
+Package: libunistring
+Status: install ok installed
+Installed-Size: 1596
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.9.9
+Description: Library providing functions for manipulating Unicode strings
+Homepage: https://www.gnu.org/software/libunistring/
+
+Package: libbz2
+Status: install ok installed
+Installed-Size: 80
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.0.6-1
+Description: BZ2 format compression library
+Homepage: http://www.bzip.org/
+
+Package: libgmp
+Status: install ok installed
+Installed-Size: 400
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 6.1.2
+Description: Library for arbitrary precision arithmetic
+Homepage: https://gmplib.org/
+
+Package: jsoncpp
+Status: install ok installed
+Installed-Size: 256
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.8.4
+Description: C++ library for interacting with JSON
+Homepage: https://github.com/open-source-parsers/jsoncpp
+
+Package: libpixman-dev
+Status: install ok installed
+Installed-Size: 92
+Maintainer: Fredrik Fornwall <fredrik@fornwall.net>
+Architecture: aarch64
+Version: 0.34.0
+Depends: libpixman
+Description: Development files for libpixman
+Homepage: http://www.pixman.org/
+
+Package: gettext-dev
+Status: install ok installed
+Installed-Size: 340
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.19.8-2
+Depends: gettext
+Description: Development files for gettext
+Homepage: https://www.gnu.org/software/gettext/
+
+Package: gettext
+Status: install ok installed
+Installed-Size: 4220
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.19.8-2
+Depends: pcre, liblzma, libxml2, libcroco, ncurses, libunistring
+Description: GNU Internationalization utilities
+Homepage: https://www.gnu.org/software/gettext/
+
+Package: curl
+Status: install ok installed
+Installed-Size: 316
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 7.59.0
+Depends: libcurl
+Description: Command line tool for transferring data with URL syntax
+Homepage: https://curl.haxx.se/
+
+Package: bash
+Status: install ok installed
+Installed-Size: 1364
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 4.4.19
+Depends: ncurses, readline, libandroid-support, termux-tools, command-not-found
+Description: A sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)
+Homepage: https://www.gnu.org/software/bash/
+
+Package: flex
+Status: install ok installed
+Installed-Size: 452
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.6.4
+Replaces: flex-dev
+Depends: m4
+Conflicts: flex-dev
+Description: Fast lexical analyser generator
+Homepage: https://github.com/westes/flex
+
+Package: openssl-tool
+Status: install ok installed
+Installed-Size: 496
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.0.2o
+Depends: openssl
+Description: The openssl command line cryptographic tool
+Homepage: https://www.openssl.org/
+
+Package: busybox
+Essential: yes
+Status: install ok installed
+Installed-Size: 640
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.28.3
+Conflicts: coreutils (<< 8.25-4)
+Description: Tiny versions of many common UNIX utilities into a single small executable
+Homepage: https://busybox.net/
+
+Package: libandroid-glob
+Status: install ok installed
+Installed-Size: 40
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.4
+Description: Shared library for the glob(3) system function
+Homepage: http://man7.org/linux/man-pages/man3/glob.3.html
+
+Package: libidn
+Status: install ok installed
+Installed-Size: 224
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.34
+Description: GNU Libidn library, implementation of IETF IDN specifications
+Homepage: http://www.gnu.org/software/libidn/
+
+Package: vim
+Status: install ok installed
+Installed-Size: 2088
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 8.0.1800
+Depends: ncurses, vim-runtime
+Conflicts: vim-python
+Conffiles:
+ /data/data/com.termux/files/usr/share/vim/vimrc de160d1d235e4435b4ce0a5edf46ea85
+Description: Vi IMproved - enhanced vi editor
+Homepage: http://www.vim.org/
+
+Package: libcroco
+Status: install ok installed
+Installed-Size: 248
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.6.12
+Depends: glib, liblzma, libxml2
+Description: CSS parsing and manipulation library
+Homepage: https://github.com/GNOME/libcroco
+
+Package: libpng
+Status: install ok installed
+Installed-Size: 196
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.6.34
+Description: Official PNG reference library
+Homepage: http://www.libpng.org/pub/png/libpng.html
+
+Package: readline-dev
+Status: install ok installed
+Installed-Size: 208
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 7.0.3-2
+Depends: readline
+Description: Development files for readline
+Homepage: http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
+
+Package: libllvm
+Status: install ok installed
+Installed-Size: 45012
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 6.0.0-2
+Replaces: gcc
+Depends: binutils, ncurses, ndk-sysroot, ndk-stl, libffi
+Conflicts: gcc, clang (<< 3.9.1-3)
+Description: Modular compiler and toolchain technologies library
+Homepage: https://clang.llvm.org/
+
+Package: libmpc
+Status: install ok installed
+Installed-Size: 112
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.1.0
+Depends: libgmp, libmpfr
+Description: Library for the arithmetic of complex numbers with arbitrarily high precision
+Homepage: http://www.multiprecision.org/
+
+Package: gpgv
+Status: install ok installed
+Installed-Size: 320
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.4.22
+Conflicts: gnupg (<= 1.4.21)
+Description: GNU privacy guard - signature verification tool
+Homepage: https://www.gnupg.org/
+
+Package: libogg
+Status: install ok installed
+Installed-Size: 52
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.3.3
+Description: Library for working with the Ogg multimedia container format
+Homepage: http://xiph.org/ogg/
+
+Package: libexpat
+Status: install ok installed
+Installed-Size: 156
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.2.5
+Description: XML parsing C library
+Homepage: https://libexpat.github.io/
+
+Package: libltdl
+Status: install ok installed
+Installed-Size: 60
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.4.6-5
+Conflicts: libtool (<= 2.4.6-3)
+Description: Library for dlopening libraries
+Homepage: https://www.gnu.org/software/libtool/
+
+Package: dash
+Essential: yes
+Status: install ok installed
+Installed-Size: 208
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.5.10
+Description: Small POSIX-compliant implementation of /bin/sh
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+
+Package: pcre
+Status: install ok installed
+Installed-Size: 368
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 8.42
+Description: Library implementing regular expression pattern matching using the same syntax and semantics as Perl 5
+Homepage: http://www.pcre.org/
+
+Package: gnupg
+Status: install ok installed
+Installed-Size: 1084
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.4.22
+Description: OpenPGP implementation for encrypting and signing data and communication
+Homepage: https://www.gnupg.org/
+
+Package: libmp3lame
+Status: install ok installed
+Installed-Size: 256
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.100
+Description: High quality MPEG Audio Layer III (MP3) encoder
+Homepage: https://lame.sourceforge.net/
+
+Package: libandroid-support
+Essential: yes
+Status: install ok installed
+Installed-Size: 180
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 22
+Description: Library extending the Android C library (Bionic) for additional multibyte, locale and math support
+Homepage: https://github.com/termux/libandroid-support
+
+Package: libffi-dev
+Status: install ok installed
+Installed-Size: 88
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.2.1-2
+Depends: libffi
+Description: Development files for libffi
+Homepage: https://sourceware.org/libffi/
+
+Package: openssl-dev
+Status: install ok installed
+Installed-Size: 1896
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.0.2o
+Depends: openssl
+Description: Development files for openssl
+Homepage: https://www.openssl.org/
+
+Package: libcairo-gobject
+Status: install ok installed
+Installed-Size: 64
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.14.12
+Depends: glib, libcairo
+Description: GObject bindings for cairo
+Homepage: https://cairographics.org
+
+Package: autoconf
+Status: install ok installed
+Installed-Size: 1988
+Maintainer: Fredrik Fornwall <fredrik@fornwall.net>
+Architecture: all
+Version: 2.69
+Depends: m4, make, perl
+Description: Creator of shell scripts to configure source code packages
+Homepage: http://www.gnu.org/software/autoconf/autoconf.html
+
+Package: glib
+Status: install ok installed
+Installed-Size: 11612
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.56.1
+Depends: libffi, pcre, libandroid-support
+Description: Library providing core building blocks for libraries and applications written in C
+Homepage: https://developer.gnome.org/glib/
+
+Package: libcurl
+Status: install ok installed
+Installed-Size: 444
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 7.59.0
+Depends: openssl, libnghttp2
+Description: Easy-to-use client-side URL transfer library
+Homepage: https://curl.haxx.se/
+
+Package: m4
+Status: install ok installed
+Installed-Size: 252
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.4.18
+Description: Traditional Unix macro processor
+Homepage: http://www.gnu.org/software/m4/m4.html
+
+Package: ndk-stl
+Status: install ok installed
+Installed-Size: 4640
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 16-4
+Description: Header files from the Android NDK needed for compiling C++ programs using STL
+Homepage: https://developer.android.com/tools/sdk/ndk/index.html
+
+Package: command-not-found
+Status: install ok installed
+Installed-Size: 160
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.30
+Description: Suggest installation of packages in interactive shell sessions
+Homepage: https://termux.com
+
+Package: freetype
+Status: install ok installed
+Installed-Size: 540
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.9.1
+Depends: libbz2, libpng
+Description: Software font engine capable of producing high-quality output
+Homepage: https://www.freetype.org
+
+Package: coreutils
+Status: install ok installed
+Installed-Size: 1496
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 8.29
+Description: Basic file, shell and text manipulation utilities from the GNU project
+Homepage: https://www.gnu.org/software/coreutils/
+
+Package: file
+Status: install ok installed
+Installed-Size: 5308
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 5.33
+Description: Command-line tool that tells you in words what kind of data a file contains
+Homepage: https://darwinsys.com/file/
+
+Package: libc++
+Essential: yes
+Status: install ok installed
+Installed-Size: 1064
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 16
+Description: C++ Standard Library
+Homepage: https://libcxx.llvm.org/
+
+Package: libisl
+Status: install ok installed
+Installed-Size: 1292
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.19
+Depends: libgmp
+Description: Library for manipulating sets and relations of integer points bounded by linear constraints
+Homepage: http://isl.gforge.inria.fr/
+
+Package: tar
+Status: install ok installed
+Installed-Size: 528
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.30-1
+Depends: xz-utils
+Description: GNU tar for manipulating tar archives
+Homepage: http://www.gnu.org/software/tar/
+
+Package: ffmpeg-dev
+Status: install ok installed
+Installed-Size: 1608
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.4.2
+Depends: ffmpeg
+Description: Development files for ffmpeg
+Homepage: https://ffmpeg.org
+
+Package: xvidcore
+Status: install ok installed
+Installed-Size: 352
+Maintainer: Fredrik Fornwall <fredrik@fornwall.net>
+Architecture: aarch64
+Version: 1.3.4-1
+Description: High performance and high quality MPEG-4 library
+Homepage: http://www.xvid.org/
+
+Package: utf8proc
+Status: install ok installed
+Installed-Size: 320
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.1.1
+Description: Library for processing UTF-8 Unicode data
+Homepage: https://github.com/JuliaLang/utf8proc
+
+Package: glib-bin
+Status: install ok installed
+Installed-Size: 576
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.56.1
+Depends: glib
+Description: Programs for the GLib library
+Homepage: https://developer.gnome.org/glib/
+
+Package: libxml2
+Status: install ok installed
+Installed-Size: 1144
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.9.8
+Depends: liblzma
+Description: Library for parsing XML documents
+Homepage: http://www.xmlsoft.org
+
+Package: libxml2-dev
+Status: install ok installed
+Installed-Size: 624
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.9.8
+Depends: libxml2
+Description: Development files for libxml2
+Homepage: http://www.xmlsoft.org
+
+Package: rsync
+Status: install ok installed
+Installed-Size: 644
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.1.3
+Depends: libpopt, openssh
+Description: Utility that provides fast incremental file transfer
+Homepage: https://rsync.samba.org/
+
+Package: ncurses
+Status: install ok installed
+Installed-Size: 528
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 6.1.20180331-1
+Description: Library for text-based user interfaces in a terminal-independent manner
+Homepage: http://invisible-island.net/ncurses/
+
+Package: perl
+Status: install ok installed
+Installed-Size: 72552
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 5.26.2
+Description: Capable, feature-rich programming language
+Homepage: https://www.perl.org/
+
+Package: apr
+Status: install ok installed
+Installed-Size: 180
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.6.3
+Depends: libuuid
+Description: Apache Portable Runtime - library providing a predictable and consistent interface to underlying platform-specific implementations
+Homepage: https://apr.apache.org/
+
+Package: serf
+Status: install ok installed
+Installed-Size: 120
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.3.9-1
+Depends: apr-util, openssl
+Description: High performance C-based HTTP client library
+Homepage: http://serf.apache.org/
+
+Package: nano
+Status: install ok installed
+Installed-Size: 560
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.9.6
+Depends: libandroid-support, libandroid-glob, ncurses
+Description: Small, free and friendly text editor
+Homepage: https://www.nano-editor.org/
+
+Package: pkg-config
+Status: install ok installed
+Installed-Size: 124
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.29.2
+Depends: glib
+Description: Helper tool used when compiling applications and libraries
+Homepage: https://www.freedesktop.org/wiki/Software/pkg-config/
+
+Package: patch
+Status: install ok installed
+Installed-Size: 232
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.7.6-1
+Description: GNU patch which applies diff files to create patched files
+Homepage: http://savannah.gnu.org/projects/patch/
+
+Package: libvorbis
+Status: install ok installed
+Installed-Size: 844
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.3.6
+Depends: libogg
+Description: Library for using the Ogg Vorbis compressed audio format
+Homepage: http://www.vorbis.com/
+
+Package: pcre2
+Status: install ok installed
+Installed-Size: 1096
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 10.31
+Description: Perl 5 compatible regular expression library
+Homepage: http://www.pcre.org/
+
+Package: libpcap
+Status: install ok installed
+Installed-Size: 304
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.8.1-1
+Description: Library for network traffic capture
+Homepage: http://www.tcpdump.org/
+
+Package: ndk-sysroot
+Status: install ok installed
+Installed-Size: 11468
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 16-8
+Replaces: libutil-dev, libgcc
+Depends: libandroid-support-dev
+Conflicts: libutil-dev, libgcc
+Description: System header and library files from the Android NDK needed for compiling C programs
+Homepage: https://developer.android.com/tools/sdk/ndk/index.html
+
+Package: librhash
+Status: install ok installed
+Installed-Size: 252
+Maintainer: Vishal Biswas @vishalbiswas
+Architecture: aarch64
+Version: 1.3.6-1
+Depends: openssl
+Description: Console utility for calculation and verification of magnet links and a wide range of hash sums
+Homepage: http://rhash.sourceforge.net/
+
+Package: xz-utils
+Status: install ok installed
+Installed-Size: 260
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 5.2.4
+Depends: liblzma
+Description: XZ-format compression tools
+Homepage: https://tukaani.org/xz/
+
+Package: libevent
+Status: install ok installed
+Installed-Size: 236
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.1.8-1
+Description: Library that provides asynchronous event notification
+Homepage: http://libevent.org/
+
+Package: libx264
+Status: install ok installed
+Installed-Size: 680
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 20180211
+Description: Library for encoding video streams into the H.264/MPEG-4 AVC format
+Homepage: https://www.videolan.org/developers/x264.html
+
+Package: dpkg
+Essential: yes
+Status: install ok installed
+Installed-Size: 868
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.19.0.4
+Depends: busybox, liblzma
+Description: Debian package management system
+Homepage: https://packages.debian.org/dpkg
+
+Package: automake
+Status: install ok installed
+Installed-Size: 1924
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: all
+Version: 1.16.1
+Depends: autoconf
+Description: Tool for automatically generating Makefile.in files
+Homepage: https://www.gnu.org/software/automake/
+
+Package: netcat
+Status: install ok installed
+Installed-Size: 232
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 7.70
+Depends: libpcap, openssl, liblua
+Description: Feature-packed networking utility which reads and writes data across networks from the command line
+Homepage: https://nmap.org/
+
+Package: freetype-dev
+Status: install ok installed
+Installed-Size: 1376
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.9.1
+Depends: freetype
+Description: Development files for freetype
+Homepage: https://www.freetype.org
+
+Package: openssl
+Status: install ok installed
+Installed-Size: 1936
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.0.2o
+Depends: ca-certificates
+Description: Library implementing the SSL and TLS protocols as well as general purpose cryptography functions
+Homepage: https://www.openssl.org/
+
+Package: subversion
+Status: install ok installed
+Installed-Size: 3700
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.10.0
+Depends: apr, apr-util, serf, libexpat, libsqlite, liblz4, utf8proc
+Description: Centralized version control system characterized by its simplicity
+Homepage: https://subversion.apache.org
+
+Package: libgnustl
+Status: install ok installed
+Installed-Size: 1100
+Maintainer: Fredrik Fornwall <fredrik@fornwall.net>
+Architecture: aarch64
+Version: 12-4
+Description: The GNU Standard C++ Library (a.k.a. libstdc++-v3), necessary on android since the system libstdc++.so is stripped down
+Homepage: http://gcc.gnu.org/onlinedocs/libstdc++/
+
+Package: libsoxr
+Status: install ok installed
+Installed-Size: 752
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.1.2
+Description: High quality, one-dimensional sample-rate conversion library
+Homepage: https://sourceforge.net/projects/soxr/
+
+Package: libsqlite
+Status: install ok installed
+Installed-Size: 680
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.23.1
+Description: Software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine
+Homepage: https://www.sqlite.org
+
+Package: ffmpeg
+Status: install ok installed
+Installed-Size: 19032
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.4.2
+Depends: libbz2, libsoxr, libx264, libx265, xvidcore, libvorbis, libmp3lame, libopus, libvpx, libgnutls, libandroid-glob
+Conflicts: libav
+Description: Tools and libraries to manipulate a wide range of multimedia formats and protocols
+Homepage: https://ffmpeg.org
+
+Package: tmux
+Status: install ok installed
+Installed-Size: 604
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.7
+Depends: ncurses, libevent, libutil, libandroid-support, libandroid-glob
+Description: Terminal multiplexer
+Homepage: https://tmux.github.io/
+
+Package: apt
+Essential: yes
+Status: install ok installed
+Installed-Size: 2748
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.4.8-2
+Replaces: apt-transport-https
+Depends: libcurl, liblzma, dpkg, gpgv, libc++, termux-exec
+Conflicts: apt-transport-https
+Conffiles:
+ /data/data/com.termux/files/usr/etc/apt/sources.list 6648b7c1e6c13987350362fc06376926
+ /data/data/com.termux/files/usr/etc/apt/trusted.gpg edd9b2ff8e4f19b4640a50391d1fa277
+Description: Front-end for the dpkg package manager
+Homepage: https://packages.debian.org/apt
+
+Package: libpcap-dev
+Status: install ok installed
+Installed-Size: 444
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.8.1-1
+Depends: libpcap
+Description: Development files for libpcap
+Homepage: http://www.tcpdump.org/
+
+Package: vim-runtime
+Status: install ok installed
+Installed-Size: 20932
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: all
+Version: 8.0.1800
+Description: Vi IMproved - Runtime files
+Homepage: http://www.vim.org/
+
+Package: libgnutls
+Status: install ok installed
+Installed-Size: 1168
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.5.18-1
+Depends: libgmp, libnettle, ca-certificates, libidn, libunistring
+Description: Secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them
+Homepage: https://www.gnutls.org/
+
+Package: binutils
+Status: install ok installed
+Installed-Size: 10972
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.30-2
+Description: Collection of binary tools, the main ones being ld, the GNU linker, and as, the GNU assembler
+Homepage: https://www.gnu.org/software/binutils/
+
+Package: libnettle
+Status: install ok installed
+Installed-Size: 428
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.4
+Depends: libgmp
+Description: Cryptographic library that is designed to fit easily in more or less any context
+Homepage: https://www.lysator.liu.se/~nisse/nettle/
+
+Package: libpng-dev
+Status: install ok installed
+Installed-Size: 512
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.6.34
+Depends: libpng
+Description: Development files for libpng
+Homepage: http://www.libpng.org/pub/png/libpng.html
+
+Package: bison
+Status: install ok installed
+Installed-Size: 968
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.0.4-2
+Depends: m4
+Description: General-purpose parser generator
+Homepage: https://www.gnu.org/software/bison/
+
+Package: libmpc-dev
+Status: install ok installed
+Installed-Size: 44
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.1.0
+Depends: libmpc
+Description: Development files for libmpc
+Homepage: http://www.multiprecision.org/
+
+Package: htop
+Status: install ok installed
+Installed-Size: 200
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.2.0-1
+Depends: ncurses, libandroid-support
+Description: Interactive process viewer for Linux
+Homepage: https://hisham.hm/htop/
+
+Package: pcre-dev
+Status: install ok installed
+Installed-Size: 736
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 8.42
+Depends: pcre
+Description: Development files for pcre
+Homepage: http://www.pcre.org/
+
+Package: ldns
+Status: install ok installed
+Installed-Size: 316
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.7.0-4
+Depends: openssl
+Description: Library for simplifying DNS programming and supporting recent and experimental RFCs
+Homepage: https://www.nlnetlabs.nl/projects/ldns/
+
+Package: termux-exec
+Status: install ok installed
+Installed-Size: 36
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 0.3
+Description: An execve() wrapper to make /bin and /usr/bin shebangs work
+Homepage: https://github.com/termux/termux-exec
+
+Package: libffi
+Status: install ok installed
+Installed-Size: 44
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.2.1-2
+Description: Library providing a portable, high level programming interface to various calling conventions
+Homepage: https://sourceware.org/libffi/
+
+Package: cmake
+Status: install ok installed
+Installed-Size: 25728
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.11.1
+Depends: libarchive, libcurl, libexpat, jsoncpp, libuv, librhash, make, clang
+Description: Family of tools designed to build, test and package software
+Homepage: https://cmake.org/
+
+Package: libedit
+Status: install ok installed
+Installed-Size: 212
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 20170329-3.1-0
+Depends: libandroid-support, ncurses
+Description: Library providing line editing, history, and tokenization functions
+Homepage: http://thrysoee.dk/editline/
+
+Package: ca-certificates
+Status: install ok installed
+Installed-Size: 244
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: all
+Version: 20180307
+Description: Common CA certificates
+Homepage: https://curl.haxx.se/docs/caextract.html
+
+Package: liblz4
+Status: install ok installed
+Installed-Size: 120
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.8.2
+Description: Fast LZ compression algorithm library
+Homepage: https://lz4.github.io/lz4/
+
+Package: libopus
+Status: install ok installed
+Installed-Size: 284
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.2.1
+Description: Reference implementation of the Opus codec
+Homepage: https://www.opus-codec.org/
+
+Package: fontconfig-dev
+Status: install ok installed
+Installed-Size: 84
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.13.0
+Depends: fontconfig, freetype-dev, libxml2-dev
+Description: Development files for fontconfig
+Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
+
+Package: libcairo-dev
+Status: install ok installed
+Installed-Size: 236
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.14.12
+Depends: libcairo
+Description: Development files for libcairo
+Homepage: https://cairographics.org
+
+Package: gdb
+Status: install ok installed
+Installed-Size: 6176
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 8.1
+Depends: liblzma, libexpat, readline, ncurses, libmpfr
+Description: The standard GNU Debugger that runs on many Unix-like systems and works for many programming languages
+Homepage: https://www.gnu.org/software/gdb/
+
+Package: libandroid-support-dev
+Status: install ok installed
+Installed-Size: 40
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 22
+Depends: libandroid-support
+Description: Development files for libandroid-support
+Homepage: https://github.com/termux/libandroid-support
+
+Package: libpixman
+Status: install ok installed
+Installed-Size: 348
+Maintainer: Fredrik Fornwall <fredrik@fornwall.net>
+Architecture: aarch64
+Version: 0.34.0
+Description: Low-level library for pixel manipulation
+Homepage: http://www.pixman.org/
+
+Package: termux-am
+Status: install ok installed
+Installed-Size: 60
+Maintainer: Michal Bednarski @michalbednarski
+Architecture: all
+Version: 0.2
+Conflicts: termux-tools (<< 0.51)
+Description: Android Oreo-compatible am command reimplementation
+Homepage: https://github.com/michalbednarski/TermuxAm
+
+Package: openssh
+Status: install ok installed
+Installed-Size: 4020
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 7.7p1-1
+Depends: libandroid-support, ldns, openssl, libedit, libutil
+Conflicts: dropbear
+Description: Secure shell for logging into a remote machine
+Homepage: https://www.openssh.com/
+
+Package: git
+Status: install ok installed
+Installed-Size: 18272
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.17.0-1
+Depends: libcurl, less, openssl, pcre2
+Description: Fast, scalable, distributed revision control system
+Homepage: https://git-scm.com/
+
+Package: libjpeg-turbo
+Status: install ok installed
+Installed-Size: 488
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.5.3
+Description: Library for reading and writing JPEG image files
+Homepage: http://libjpeg-turbo.virtualgl.org/
+
+Package: readline
+Status: install ok installed
+Installed-Size: 328
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 7.0.3-2
+Depends: libandroid-support, ncurses
+Conffiles:
+ /data/data/com.termux/files/usr/etc/inputrc cc1bb4090e5d4a1bf84f2bbc0eda2f68
+Description: Library that allow users to edit command lines as they are typed in
+Homepage: http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
+
+Package: libuuid
+Status: install ok installed
+Installed-Size: 40
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.0.3-1
+Description: Portable uuid C library
+Homepage: http://sourceforge.net/projects/libuuid/
+
+Package: fontconfig
+Status: install ok installed
+Installed-Size: 544
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.13.0
+Depends: freetype, libxml2, libpng, libuuid
+Description: Library for configuring and customizing font access
+Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
+
+Package: glib-dev
+Status: install ok installed
+Installed-Size: 2580
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 2.56.1
+Depends: glib, pcre-dev
+Description: Development files for glib
+Homepage: https://developer.gnome.org/glib/
+
+Package: libarchive
+Status: install ok installed
+Installed-Size: 672
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 3.3.2
+Depends: libbz2, liblzma, libxml2, openssl
+Description: Multi-format archive and compression library
+Homepage: https://www.libarchive.org/
+
+Package: sed
+Status: install ok installed
+Installed-Size: 184
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 4.5
+Description: GNU stream editor for filtering/transforming text
+Homepage: https://www.gnu.org/software/sed/
+
+Package: libmpfr-dev
+Status: install ok installed
+Installed-Size: 100
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 4.0.1
+Depends: libmpfr
+Description: Development files for libmpfr
+Homepage: http://www.mpfr.org/
+
+Package: termux-tools
+Essential: yes
+Status: install ok installed
+Installed-Size: 120
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: all
+Version: 0.54
+Depends: termux-am
+Conffiles:
+ /data/data/com.termux/files/usr/etc/motd 6534c817277870145806f9fd0deebd59
+Description: Basic system tools for Termux
+Homepage: https://termux.com/
+
+Package: libuv
+Status: install ok installed
+Installed-Size: 160
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.20.3
+Description: Support library with a focus on asynchronous I/O
+Homepage: http://libuv.org
+

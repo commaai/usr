@@ -1,0 +1,14 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/pkgconfig
+/data/data/com.termux/files/usr/lib/pkgconfig/fontconfig.pc
+/data/data/com.termux/files/usr/include
+/data/data/com.termux/files/usr/include/fontconfig
+/data/data/com.termux/files/usr/include/fontconfig/fcfreetype.h
+/data/data/com.termux/files/usr/include/fontconfig/fcprivate.h
+/data/data/com.termux/files/usr/include/fontconfig/fontconfig.h

@@ -1,0 +1,10 @@
+9b69a5dc1bb7617d06b5706aa1d2f38b  data/data/com.termux/files/usr/lib/libcrypto.so.1.0.0
+f2a8f1d780b3fdc6d598f7d54f6add18  data/data/com.termux/files/usr/lib/libssl.so.1.0.0
+b0134bd461477e3adb4f0db08d8593f6  data/data/com.termux/files/usr/etc/tls/misc/CA.sh
+d0dbec3ed2a764adfc07ea39e619052f  data/data/com.termux/files/usr/etc/tls/misc/CA.pl
+928a62ef598d9c796aea412aa5afe9bc  data/data/com.termux/files/usr/etc/tls/misc/c_hash
+14adb497bc4a801ac325203578080cd9  data/data/com.termux/files/usr/etc/tls/misc/tsget
+d529e77fcf9bec8ba0d3dd25bb0c74e3  data/data/com.termux/files/usr/etc/tls/misc/c_issuer
+76e7eceb0498f30d2e800d2c1b46a861  data/data/com.termux/files/usr/etc/tls/misc/c_info
+ce30d23c5346b3a97dcfe10a7da8149a  data/data/com.termux/files/usr/etc/tls/misc/c_name
+7df26c55291b33344dc15e3935dabaf3  data/data/com.termux/files/usr/etc/tls/openssl.cnf

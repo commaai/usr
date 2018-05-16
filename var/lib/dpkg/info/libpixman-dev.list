@@ -1,0 +1,13 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/pkgconfig
+/data/data/com.termux/files/usr/lib/pkgconfig/pixman-1.pc
+/data/data/com.termux/files/usr/include
+/data/data/com.termux/files/usr/include/pixman-1
+/data/data/com.termux/files/usr/include/pixman-1/pixman-version.h
+/data/data/com.termux/files/usr/include/pixman-1/pixman.h

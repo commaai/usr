@@ -1,0 +1,8 @@
+267dece2f8b1c619b9533756f0874d29  data/data/com.termux/files/usr/share/man/man1/gcore.1
+18b05a8414ed977429e5339fc7451d71  data/data/com.termux/files/usr/share/man/man1/gdb.1
+a4c92654ad5da98f301f6850a90d9d4d  data/data/com.termux/files/usr/share/man/man1/gdbserver.1
+7b8cb95e04e19d9b259e096d8f34326d  data/data/com.termux/files/usr/share/man/man5/gdbinit.5
+2387abd88644f889a323e81e9c06a011  data/data/com.termux/files/usr/bin/gcore
+6e0b5b43da415ddb8fd3544d68acb2b6  data/data/com.termux/files/usr/bin/gdb
+90e81e3e4a450d403bc64e0ab1217196  data/data/com.termux/files/usr/bin/gdbserver
+3d40098e511b295a2bcfa761c2ac8e3d  data/data/com.termux/files/usr/lib/libinproctrace.so

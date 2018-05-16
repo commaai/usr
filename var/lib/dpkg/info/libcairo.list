@@ -1,0 +1,13 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/bin
+/data/data/com.termux/files/usr/bin/cairo-trace
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/libcairo-script-interpreter.so
+/data/data/com.termux/files/usr/lib/libcairo.so
+/data/data/com.termux/files/usr/lib/cairo
+/data/data/com.termux/files/usr/lib/cairo/libcairo-trace.so

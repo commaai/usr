@@ -1,0 +1,11 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/bin
+/data/data/com.termux/files/usr/bin/am
+/data/data/com.termux/files/usr/libexec
+/data/data/com.termux/files/usr/libexec/termux-am
+/data/data/com.termux/files/usr/libexec/termux-am/am.apk

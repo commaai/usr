@@ -1,0 +1,13 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/libhogweed.so.4.4
+/data/data/com.termux/files/usr/lib/libnettle.so.6.4
+/data/data/com.termux/files/usr/lib/libhogweed.so
+/data/data/com.termux/files/usr/lib/libhogweed.so.4
+/data/data/com.termux/files/usr/lib/libnettle.so.6
+/data/data/com.termux/files/usr/lib/libnettle.so

@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Codename: termux
+Version: 1
+Architectures: x86_64 arm i686 aarch64 all
+Description: Extras repository
+Suite: termux
+Date: Fri, 11 May 2018 01:14:05 UTC
+SHA256:
+ 7e972ef3f7fa1bd4248a6aafe887c8273defc6113b7195ad38ec10a5a5d8b017 89717 extras/binary-x86_64/Packages
+ da24ea3b617717b54e43a5d2b4a4eb8c6ef4fcb727844e566394acea5ae43af4 16984 extras/binary-x86_64/Packages.xz
+ b55eb65c4cff14d0a102175907c13cdcf37451ec4a77f7c5e584ff6bfec11884 97918 extras/binary-arm/Packages
+ 6e40a0127f9e03e12e90032f256e7a9300e30a74322bf797e462d4db3bcc057a 19048 extras/binary-arm/Packages.xz
+ 004a948cf4bf863237267f168394a0ae828e0c06dba5538fb983382801cfdcdb 88755 extras/binary-i686/Packages
+ ef11f0b827abe4923279c7c3ae9aaf838ab42745acafcb07913ccddbe2cdafad 17068 extras/binary-i686/Packages.xz
+ 298efaa34ef213ae901fc86ba30ae62cbb2754d5f8c055c11778f0bbe8fe0aea 100407 extras/binary-aarch64/Packages
+ 7dafbb013e68b1eacb8c40ff54f063660d5b7530f2d835199679ed82b4c9f3ca 18780 extras/binary-aarch64/Packages.xz
+ 027feb219c8ca80214d453a79573ef5caf345a84f8a6227d847bc6517f5dba6b 8143 extras/binary-all/Packages
+ 6a8b9036dedc07bb348fd4ac6af6f86db51db379e8c533a674e728b736afc35f 1820 extras/binary-all/Packages.xz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEYp8p4kODeD77H3/QkG9a+poyxy0FAlr07mQACgkQkG9a+poy
+xy1mbBAApn9YlUUR7+DSCrEgCd0gOS1U8HhjEVwjEEI0fz/ozxXbch8RZ0w/kHF7
+WW8alEuvnQyOFh7+9Yu/GBHm5w3iuhfP8H+5+bYEthDPOzxVHKgl021c9dKD00CY
+dzh6//uPxmVtaVeS8gL2AR4eCLzmGOrvScEpl1VWRj8cMD0qgyQSF9iK90LPxeea
+Cgx29sKDfW2hP6SYhyJiA3LPYan7HFnQSZE7AtZr0gBUxsSPmxAta0H5w1bGWJw4
+wTAPcdOKY43ht2bupZrEnaNzAvqytMkam9ovK5e9bInM+ManXTAWHzXRYWsq5B3Y
+JUCjum2j8nbCznlm72K9zn3nrQLbp8DPbTg4XzWFky2xdaeaOGdbS4KtY2+I/eUE
+VqKtHx9DTjgW1HA71dGldEkGoFslkYRHrJIFo3ZJLQjJCnenqE6WMwDo3qJgK2IJ
+9L9QjY6KRXGnRBzsWF+yAh9iv/WhUy4l/KsWLQD2pufKmn0Y9iIYebhb2Q7pRdHD
+RA4QoDpXVk7ZlJ4MJpRCeNEoMvsfTZw6yvM6z7/eW1HolVB4u5htVIAhPixls+vT
+uqddU7QKkmEyInN2em8frGznL6+j+0zzuZXOXv5U8tPY2M2eiE1m3bI9Mc727S56
+SRQ91gKX/ZP3z2Ic1PFw/1McizOPbbORJrMNGY6qDgOurztzVX4=
+=OBHq
+-----END PGP SIGNATURE-----

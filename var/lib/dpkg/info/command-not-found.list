@@ -1,0 +1,9 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/libexec
+/data/data/com.termux/files/usr/libexec/termux
+/data/data/com.termux/files/usr/libexec/termux/command-not-found

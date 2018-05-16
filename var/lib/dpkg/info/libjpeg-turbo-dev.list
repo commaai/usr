@@ -1,0 +1,16 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/pkgconfig
+/data/data/com.termux/files/usr/lib/pkgconfig/libturbojpeg.pc
+/data/data/com.termux/files/usr/lib/pkgconfig/libjpeg.pc
+/data/data/com.termux/files/usr/include
+/data/data/com.termux/files/usr/include/jmorecfg.h
+/data/data/com.termux/files/usr/include/jpeglib.h
+/data/data/com.termux/files/usr/include/jerror.h
+/data/data/com.termux/files/usr/include/jconfig.h
+/data/data/com.termux/files/usr/include/turbojpeg.h

@@ -1,0 +1,19 @@
+{
+  "extra_link_args": [], 
+  "define_macros": [
+    [
+      "HAVE_SYS_UN_H", 
+      1
+    ]
+  ], 
+  "runtime_library_dirs": [], 
+  "libraries": [
+    "zmq"
+  ], 
+  "library_dirs": [], 
+  "include_dirs": [
+    "zmq/utils", 
+    "zmq/backend/cython", 
+    "zmq/devices"
+  ]
+}

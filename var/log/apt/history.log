@@ -1,0 +1,304 @@
+
+Start-Date: 2016-08-04  03:17:57
+Commandline: apt install -y git openssh coreutils tmux clang clang++ gcc g++ make gdb strace curl file patch vim cmake grep
+Install: libcurl:aarch64 (7.50.0, automatic), libmpfr:aarch64 (3.1.4, automatic), clang:aarch64 (3.8.1), libbz2:aarch64 (1.0.6, automatic), openssh:aarch64 (7.2p2-7), openssl:aarch64 (1.0.2h-1, automatic), strace:aarch64 (4.12), libexpat:aarch64 (2.1.1, automatic), libgcc:aarch64 (4.9, automatic), libgmp:aarch64 (6.1.0-1, automatic), binutils:aarch64 (2.26.1-1, automatic), libisl:aarch64 (0.16.1, automatic), ndk-sysroot:aarch64 (12-3, automatic), clang-dev:aarch64 (3.8.1), g++:aarch64 (6.1.0-2), gcc:aarch64 (6.1.0-2), gdb:aarch64 (7.11.1), coreutils:aarch64 (8.25-4), git:aarch64 (2.9.2), libmpc:aarch64 (1.0.3-1, automatic), jsoncpp:aarch64 (1.7.2, automatic), libevent:aarch64 (2.0.22, automatic), make:aarch64 (4.2.1), vim-runtime:aarch64 (7.4.2112, automatic), vim:aarch64 (7.4.2112), grep:aarch64 (2.25-1), libarchive:aarch64 (3.2.0, automatic), ndk-stl:aarch64 (12, automatic), pcre:aarch64 (8.39, automatic), libxml2:aarch64 (2.9.4, automatic), file:aarch64 (5.28), cmake:aarch64 (3.5.2-1), libutil:aarch64 (0.2, automatic), ca-certificates:aarch64 (20160429, automatic), tmux:aarch64 (2.2-1), libandroid-support-dev:aarch64 (12.9, automatic), curl:aarch64 (7.50.0), patch:aarch64 (2.7.5), ldns:aarch64 (1.6.17, automatic), less:aarch64 (481, automatic)
+End-Date: 2016-08-04  03:18:15
+
+Start-Date: 2016-08-04  03:21:05
+Commandline: apt install -y git openssh coreutils tmux clang clang++ gcc g++ make gdb strace curl file patch vim cmake grep openssl-dev libffi-dev readline-dev
+Install: openssl-dev:aarch64 (1.0.2h-1), libffi:aarch64 (3.2.1-1, automatic), libffi-dev:aarch64 (3.2.1-1), readline-dev:aarch64 (6.3.8)
+End-Date: 2016-08-04  03:21:06
+
+Start-Date: 2016-08-04  07:27:13
+Commandline: apt install htop
+Install: htop:aarch64 (2.0.1-2)
+End-Date: 2016-08-04  07:27:13
+
+Start-Date: 2016-08-09  05:46:51
+Commandline: apt install automake
+Install: m4:aarch64 (1.4.17, automatic), automake:aarch64 (1.15), autoconf:aarch64 (2.69, automatic), perl:aarch64 (5.24.0, automatic)
+End-Date: 2016-08-09  05:46:56
+
+Start-Date: 2016-08-10  07:52:21
+Commandline: apt install debianutils
+Install: debianutils:aarch64 (4.8)
+Error: Sub-process /data/data/com.termux/files/usr/bin/dpkg returned an error code (2)
+End-Date: 2016-08-10  07:52:21
+
+Start-Date: 2016-08-10  10:55:25
+Commandline: apt install libgmp-dev libmpfr-dev libmpc-dev
+Install: libgmp-dev:aarch64 (6.1.0-1), libmpfr-dev:aarch64 (3.1.4), libmpc-dev:aarch64 (1.0.3-1)
+End-Date: 2016-08-10  10:55:25
+
+Start-Date: 2016-08-10  14:30:49
+Commandline: apt-get install libjpeg-turbo-dev
+Install: libjpeg-turbo-dev:aarch64 (1.4.2-1), libjpeg-turbo:aarch64 (1.4.2-1, automatic)
+End-Date: 2016-08-10  14:30:49
+
+Start-Date: 2016-08-19  21:31:43
+Commandline: apt install subversion
+Install: libsqlite:aarch64 (3.14.1, automatic), apr:aarch64 (1.5.2-1, automatic), subversion:aarch64 (1.9.4-1), libuuid:aarch64 (1.0.3, automatic), apr-util:aarch64 (1.5.4-1, automatic), serf:aarch64 (1.3.8-1, automatic)
+End-Date: 2016-08-19  21:31:44
+
+Start-Date: 2016-08-20  08:43:56
+Commandline: apt install --reinstall clang
+Upgrade: clang:aarch64 (3.8.1, 3.8.1-3)
+Remove: g++:aarch64 (6.1.0-2), gcc:aarch64 (6.1.0-2)
+End-Date: 2016-08-20  08:43:58
+
+Start-Date: 2016-08-20  10:54:00
+Commandline: apt remove clang clang-dev
+Remove: clang:aarch64 (3.8.2), clang-dev:aarch64 (3.8.2)
+End-Date: 2016-08-20  10:54:00
+
+Start-Date: 2016-08-20  10:54:30
+Commandline: apt install clang clang-dev
+Install: clang:aarch64 (3.8.1-3), clang-dev:aarch64 (3.8.1-3)
+End-Date: 2016-08-20  10:54:33
+
+Start-Date: 2016-08-21  15:51:47
+Commandline: apt install rsync
+Install: rsync:aarch64 (3.1.2)
+End-Date: 2016-08-21  15:51:47
+
+Start-Date: 2016-08-21  16:32:05
+Commandline: apt install ffmpeg
+Install: libvorbis:aarch64 (1.3.5, automatic), ffmpeg:aarch64 (3.1.2), libmp3lame:aarch64 (3.99, automatic), libogg:aarch64 (1.3.2, automatic), libx264:aarch64 (20160503-2245-0, automatic), xvidcore:aarch64 (1.3.4-1, automatic), libfaac:aarch64 (1.28, automatic)
+End-Date: 2016-08-21  16:32:06
+
+Start-Date: 2016-08-21  16:39:43
+Commandline: apt remove ffmpeg
+Remove: ffmpeg:aarch64 (3.1.2)
+End-Date: 2016-08-21  16:39:43
+
+Start-Date: 2016-08-21  16:39:49
+Commandline: apt autoremove
+Remove: libvorbis:aarch64 (1.3.5), libmp3lame:aarch64 (3.99), libisl:aarch64 (0.16.1), libogg:aarch64 (1.3.2), libx264:aarch64 (20160503-2245-0), xvidcore:aarch64 (1.3.4-1), libfaac:aarch64 (1.28)
+End-Date: 2016-08-21  16:39:49
+
+Start-Date: 2016-08-21  16:40:00
+Commandline: apt install ffmpeg-dev
+Install: libvorbis:aarch64 (1.3.5, automatic), ffmpeg:aarch64 (3.1.2, automatic), libmp3lame:aarch64 (3.99, automatic), libogg:aarch64 (1.3.2, automatic), libx264:aarch64 (20160503-2245-0, automatic), xvidcore:aarch64 (1.3.4-1, automatic), libfaac:aarch64 (1.28, automatic), ffmpeg-dev:aarch64 (3.1.2)
+End-Date: 2016-08-21  16:40:02
+
+Start-Date: 2016-08-21  16:41:24
+Commandline: apt remove ffmpeg
+Remove: ffmpeg:aarch64 (3.1.2), ffmpeg-dev:aarch64 (3.1.2)
+End-Date: 2016-08-21  16:41:24
+
+Start-Date: 2016-08-21  16:41:30
+Commandline: apt autoremove
+Remove: libvorbis:aarch64 (1.3.5), libmp3lame:aarch64 (3.99), libogg:aarch64 (1.3.2), libx264:aarch64 (20160503-2245-0), xvidcore:aarch64 (1.3.4-1), libfaac:aarch64 (1.28)
+End-Date: 2016-08-21  16:41:30
+
+Start-Date: 2016-08-21  16:41:53
+Commandline: apt install ffmpeg-dev
+Install: libvorbis:aarch64 (1.3.5, automatic), ffmpeg:aarch64 (3.1.2, automatic), libmp3lame:aarch64 (3.99, automatic), libogg:aarch64 (1.3.2, automatic), libx264:aarch64 (20160503-2245-0, automatic), xvidcore:aarch64 (1.3.4-1, automatic), libfaac:aarch64 (1.28, automatic), ffmpeg-dev:aarch64 (3.1.2)
+End-Date: 2016-08-21  16:41:55
+
+Start-Date: 2016-08-21  16:42:31
+Commandline: apt remove ffmpeg
+Remove: ffmpeg:aarch64 (3.1.2), ffmpeg-dev:aarch64 (3.1.2)
+End-Date: 2016-08-21  16:42:31
+
+Start-Date: 2016-08-21  16:42:39
+Commandline: apt autoremove
+Remove: libvorbis:aarch64 (1.3.5), libmp3lame:aarch64 (3.99), libogg:aarch64 (1.3.2), libx264:aarch64 (20160503-2245-0), xvidcore:aarch64 (1.3.4-1), libfaac:aarch64 (1.28)
+End-Date: 2016-08-21  16:42:39
+
+Start-Date: 2016-08-21  16:44:26
+Commandline: apt install ffmpeg-dev
+Install: libvorbis:aarch64 (1.3.5, automatic), ffmpeg:aarch64 (3.1.2, automatic), libmp3lame:aarch64 (3.99, automatic), libogg:aarch64 (1.3.2, automatic), libx264:aarch64 (20160503-2245-0, automatic), xvidcore:aarch64 (1.3.4-1, automatic), libfaac:aarch64 (1.28, automatic), ffmpeg-dev:aarch64 (3.1.2)
+End-Date: 2016-08-21  16:44:28
+
+Start-Date: 2016-09-19  17:02:08
+Commandline: apt install openssl-tool
+Install: openssl-tool:aarch64 (1.0.2h-1)
+Error: Sub-process /data/data/com.termux/files/usr/bin/dpkg returned an error code (2)
+End-Date: 2016-09-19  17:02:08
+
+Start-Date: 2016-09-19  17:02:14
+Commandline: apt install openssl-tool
+Install: openssl-tool:aarch64 (1.0.2h-1)
+Error: Sub-process /data/data/com.termux/files/usr/bin/dpkg returned an error code (2)
+End-Date: 2016-09-19  17:02:14
+
+Start-Date: 2016-09-19  17:02:36
+Commandline: apt install openssl-tool
+Install: openssl-tool:aarch64 (1.0.2h-1)
+End-Date: 2016-09-19  17:02:37
+
+Start-Date: 2017-01-10  12:13:59
+Commandline: apt-get install libpng-dev
+Install: libpng-dev:aarch64 (1.6.27), libpng:aarch64 (1.6.27, automatic)
+Error: Sub-process /data/data/com.termux/files/usr/bin/dpkg returned an error code (2)
+End-Date: 2017-01-10  12:13:59
+
+Start-Date: 2017-01-10  12:14:05
+Commandline: apt-get install libpng-dev
+Install: libpng-dev:aarch64 (1.6.27), libpng:aarch64 (1.6.27, automatic)
+End-Date: 2017-01-10  12:14:06
+
+Start-Date: 2017-01-10  12:14:19
+Commandline: apt-get install freetype-dev
+Install: freetype-dev:aarch64 (2.7.1), freetype:aarch64 (2.7.1, automatic)
+End-Date: 2017-01-10  12:14:19
+
+Start-Date: 2017-01-10  12:15:12
+Commandline: apt-get install pkg-config
+Install: glib:aarch64 (2.50.2, automatic), pkg-config:aarch64 (0.29.1-1)
+End-Date: 2017-01-10  12:15:13
+
+Start-Date: 2017-02-03  18:42:17
+Commandline: apt-get install libtool
+Install: libltdl:aarch64 (2.4.6-4, automatic), libtool:aarch64 (2.4.6-4)
+End-Date: 2017-02-03  18:42:18
+
+Start-Date: 2017-02-03  18:43:45
+Commandline: apt-get install sed
+Install: sed:aarch64 (4.3)
+End-Date: 2017-02-03  18:43:46
+
+Start-Date: 2017-02-04  19:38:39
+Commandline: apt-get install netcat
+Install: netcat:aarch64 (7.40), libpcap:aarch64 (1.8.1, automatic)
+End-Date: 2017-02-04  19:38:40
+
+Start-Date: 2017-02-06  19:01:20
+Commandline: apt-get install libpcap-dev
+Install: libpcap-dev:aarch64 (1.8.1)
+End-Date: 2017-02-06  19:01:21
+
+Start-Date: 2017-09-06  18:44:24
+Commandline: apt-get -f install
+Remove: gcc-6:aarch64 (6.3.0-4)
+End-Date: 2017-09-06  18:44:24
+
+Start-Date: 2017-09-06  18:44:38
+Commandline: apt install libisl
+Install: libisl:aarch64 (0.18)
+End-Date: 2017-09-06  18:44:39
+
+Start-Date: 2017-09-06  18:45:35
+Commandline: apt install -f
+Remove: gcc-6:aarch64 (6.3.0-4)
+End-Date: 2017-09-06  18:45:35
+
+Start-Date: 2018-04-22  10:42:02
+Commandline: apt-get -f install
+Remove: gcc-6:aarch64 (6.3.0-4)
+Error: Sub-process /data/data/com.termux/files/usr/bin/dpkg returned an error code (2)
+End-Date: 2018-04-22  10:42:02
+
+Start-Date: 2018-04-22  10:42:09
+Commandline: apt-get -f install
+Remove: gcc-6:aarch64 (6.3.0-4)
+End-Date: 2018-04-22  10:42:09
+
+Start-Date: 2018-04-22  10:42:22
+Commandline: apt install -f tar
+Install: tar:aarch64 (1.30-1), xz-utils:aarch64 (5.2.3, automatic)
+End-Date: 2018-04-22  10:42:22
+
+Start-Date: 2018-04-22  15:06:06
+Commandline: apt-get install flex
+Install: flex:aarch64 (2.6.4)
+End-Date: 2018-04-22  15:06:07
+
+Start-Date: 2018-04-22  15:07:38
+Commandline: apt-get install bison
+Install: bison:aarch64 (3.0.4-2)
+End-Date: 2018-04-22  15:07:39
+
+Start-Date: 2018-04-25  11:46:09
+Commandline: apt-get install libcairo-dev
+Install: libpixman:aarch64 (0.34.0, automatic), libcairo-dev:aarch64 (1.14.12), fontconfig:aarch64 (2.12.6, automatic), libcairo:aarch64 (1.14.12, automatic)
+End-Date: 2018-04-25  11:46:09
+
+Start-Date: 2018-04-25  11:46:51
+Commandline: apt-get install libcairo-gobject
+Install: libcairo-gobject:aarch64 (1.14.12)
+End-Date: 2018-04-25  11:46:51
+
+Start-Date: 2018-04-25  11:48:30
+Commandline: apt-get install glib-dev
+Install: glib-dev:aarch64 (2.56.1), pcre-dev:aarch64 (8.42, automatic)
+End-Date: 2018-04-25  11:48:31
+
+Start-Date: 2018-04-25  11:48:53
+Commandline: apt-get install libpixman-dev
+Install: libpixman-dev:aarch64 (0.34.0)
+End-Date: 2018-04-25  11:48:53
+
+Start-Date: 2018-04-25  11:49:50
+Commandline: apt-get install fontconfig-dev
+Install: fontconfig-dev:aarch64 (2.12.6), libxml2-dev:aarch64 (2.9.8, automatic)
+End-Date: 2018-04-25  11:49:51
+
+Start-Date: 2018-04-25  12:02:28
+Commandline: apt-get install gettext-dev
+Install: libunistring:aarch64 (0.9.9, automatic), gettext-dev:aarch64 (0.19.8-2), gettext:aarch64 (0.19.8-2, automatic), libcroco:aarch64 (0.6.12, automatic)
+End-Date: 2018-04-25  12:02:28
+
+Start-Date: 2018-04-25  12:33:59
+Commandline: apt-get install glib-bin glib-dev glib
+Install: glib-bin:aarch64 (2.56.1)
+Upgrade: glib:aarch64 (2.50.2, 2.56.1)
+End-Date: 2018-04-25  12:34:00
+
+Start-Date: 2018-05-15  15:23:44
+Commandline: apt upgrade
+Install: libedit:aarch64 (20170329-3.1-0, automatic), libc++:aarch64 (16, automatic), libpopt:aarch64 (1.16-2, automatic), libllvm:aarch64 (6.0.0-2, automatic), libidn:aarch64 (1.34, automatic), libsoxr:aarch64 (0.1.2, automatic), pcre2:aarch64 (10.31, automatic), libuv:aarch64 (1.20.3, automatic), liblua:aarch64 (5.3.4-3, automatic), liblz4:aarch64 (1.8.2, automatic), libgnutls:aarch64 (3.5.18-1, automatic), termux-am:aarch64 (0.2, automatic), libopus:aarch64 (1.2.1, automatic), libx265:aarch64 (2.6, automatic), libvpx:aarch64 (1.6.1-1, automatic), utf8proc:aarch64 (2.1.1, automatic), gpgv:aarch64 (1.4.22, automatic), libnettle:aarch64 (3.4, automatic), librhash:aarch64 (1.3.6-1, automatic), libnghttp2:aarch64 (1.31.1, automatic), termux-exec:aarch64 (0.3, automatic), libandroid-glob:aarch64 (0.4, automatic)
+Upgrade: libcurl:aarch64 (7.50.0, 7.59.0), libmpfr:aarch64 (3.1.4, 4.0.1), libvorbis:aarch64 (1.3.5, 1.3.6), clang:aarch64 (3.8.2, 6.0.0-2), libbz2:aarch64 (1.0.6, 1.0.6-1), ffmpeg:aarch64 (3.1.2, 3.4.2), m4:aarch64 (1.4.17, 1.4.18), openssl-dev:aarch64 (1.0.2h-1, 1.0.2o), openssh:aarch64 (7.2p2-7, 7.7p1-1), openssl:aarch64 (1.0.2h-1, 1.0.2o), strace:aarch64 (4.12, 4.20), libsqlite:aarch64 (3.14.1, 3.23.1), libjpeg-turbo-dev:aarch64 (1.4.2-1, 1.5.3), libexpat:aarch64 (2.1.1, 2.2.5), libffi:aarch64 (3.2.1-1, 3.2.1-2), dash:aarch64 (0.5.8-3, 0.5.10), apr:aarch64 (1.5.2-1, 1.6.3), apt:aarch64 (1.2.12, 1.4.8-2), libgmp:aarch64 (6.1.0-1, 6.1.2), libpng-dev:aarch64 (1.6.27, 1.6.34), libmp3lame:aarch64 (3.99, 3.100), binutils:aarch64 (2.26.1-1, 2.30-2), libisl:aarch64 (0.18, 0.19), libffi-dev:aarch64 (3.2.1-1, 3.2.1-2), automake:aarch64 (1.15, 1.16.1), libgmp-dev:aarch64 (6.1.0-1, 6.1.2), gdb:aarch64 (7.11.1, 8.1), coreutils:aarch64 (8.25-4, 8.29), git:aarch64 (2.9.2, 2.17.0-1), freetype-dev:aarch64 (2.7.1, 2.9.1), libmpc:aarch64 (1.0.3-1, 1.1.0), libogg:aarch64 (1.3.2, 1.3.3), libltdl:aarch64 (2.4.6-4, 2.4.6-5), readline-dev:aarch64 (6.3.8, 7.0.3-2), libpng:aarch64 (1.6.27, 1.6.34), jsoncpp:aarch64 (1.7.2, 1.8.4), htop:aarch64 (2.0.1-2, 2.2.0-1), libjpeg-turbo:aarch64 (1.4.2-1, 1.5.3), libx264:aarch64 (20170122, 20180211), autoconf:aarch64 (2.69, 2.69), freetype:aarch64 (2.7.1, 2.9.1), dpkg:aarch64 (1.18.7, 1.19.0.4), fontconfig:aarch64 (2.12.6, 2.13.0), libmpfr-dev:aarch64 (3.1.4, 4.0.1), libevent:aarch64 (2.0.22, 2.1.8-1), liblzma:aarch64 (5.2.2, 5.2.4), fontconfig-dev:aarch64 (2.12.6, 2.13.0), subversion:aarch64 (1.9.4-1, 1.10.0), readline:aarch64 (6.3.8, 7.0.3-2), pkg-config:aarch64 (0.29.1-1, 0.29.2), sed:aarch64 (4.3, 4.5), libandroid-support:aarch64 (12.9, 22), termux-tools:aarch64 (0.28, 0.54), libmpc-dev:aarch64 (1.0.3-1, 1.1.0), vim-runtime:aarch64 (7.4.2112, 8.0.1800), vim:aarch64 (7.4.2112, 8.0.1800), xz-utils:aarch64 (5.2.3, 5.2.4), libx264-dev:aarch64 (20170122, 20180211), grep:aarch64 (2.25-1, 3.1), libarchive:aarch64 (3.2.0, 3.3.2), ncurses:aarch64 (6.0.20160423, 6.1.20180331-1), ndk-stl:aarch64 (12, 16-4), bash:aarch64 (4.3.42-8, 4.4.19), pcre:aarch64 (8.39, 8.42), busybox:aarch64 (1.24.2-5, 1.28.3), libxml2:aarch64 (2.9.4, 2.9.8), file:aarch64 (5.28, 5.33), ffmpeg-dev:aarch64 (3.1.2, 3.4.2), cmake:aarch64 (3.5.2-1, 3.11.1), libutil:aarch64 (0.2, 0.3), ca-certificates:aarch64 (20160429, 20180307), perl:aarch64 (5.24.0, 5.26.2), rsync:aarch64 (3.1.2, 3.1.3), netcat:aarch64 (7.40, 7.70), libuuid:aarch64 (1.0.3, 1.0.3-1), command-not-found:aarch64 (1.11, 1.30), tmux:aarch64 (2.2-1, 2.7), apr-util:aarch64 (1.5.4-1, 1.6.1), libpcap:aarch64 (1.8.1, 1.8.1-1), gnupg:aarch64 (1.4.20-2, 1.4.22), openssl-tool:aarch64 (1.0.2h-1, 1.0.2o), libandroid-support-dev:aarch64 (12.9, 22), curl:aarch64 (7.50.0, 7.59.0), patch:aarch64 (2.7.5, 2.7.6-1), ldns:aarch64 (1.6.17, 1.7.0-4), serf:aarch64 (1.3.8-1, 1.3.9-1), less:aarch64 (481, 530-1), libtool:aarch64 (2.4.6-4, 2.4.6-5), libpcap-dev:aarch64 (1.8.1, 1.8.1-1)
+End-Date: 2018-05-15  15:24:42
+
+Start-Date: 2018-05-15  15:31:05
+Commandline: apt install libclang
+Install: libclang:aarch64 (6.0.0-2)
+End-Date: 2018-05-15  15:31:06
+
+Start-Date: 2018-05-15  15:39:15
+Commandline: apt install ndk-sysroot
+Upgrade: ndk-sysroot:aarch64 (12-3, 16-8)
+Remove: libgcc:aarch64 (4.9), openblas:aarch64 (0.2.19-2)
+End-Date: 2018-05-15  15:39:17
+
+Start-Date: 2018-05-15  15:40:00
+Commandline: apt remove libclang
+Remove: libclang:aarch64 (6.0.0-2)
+End-Date: 2018-05-15  15:40:00
+
+Start-Date: 2018-05-15  15:40:09
+Commandline: apt autoremove
+Remove: libfaac:aarch64 (1.28)
+End-Date: 2018-05-15  15:40:10
+
+Start-Date: 2018-05-15  15:41:11
+Commandline: apt install emacs
+Install: emacs:aarch64 (25.3-2), gnutls:aarch64 (3.5.18-1, automatic)
+End-Date: 2018-05-15  15:41:18
+
+Start-Date: 2018-05-15  15:43:53
+Commandline: apt install nano
+Install: nano:aarch64 (2.9.6)
+End-Date: 2018-05-15  15:43:53
+
+Start-Date: 2018-05-15  15:51:13
+Commandline: apt install libcompiler-rt
+Install: libcompiler-rt:aarch64 (6.0.0)
+End-Date: 2018-05-15  15:51:13
+
+Start-Date: 2018-05-15  16:32:32
+Commandline: apt remove emacs
+Remove: emacs:aarch64 (25.3-2)
+End-Date: 2018-05-15  16:32:33
+
+Start-Date: 2018-05-15  16:40:08
+Commandline: apt remove clang-dev
+Remove: clang-dev:aarch64 (3.8.2)
+End-Date: 2018-05-15  16:40:09
+
+Start-Date: 2018-05-16  13:22:51
+Commandline: apt autoremove
+Remove: gnutls:aarch64 (3.5.18-1)
+End-Date: 2018-05-16  13:22:51

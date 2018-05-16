@@ -1,0 +1,159 @@
+.TH SSH-KEYSCAN 1 "March 5 2018 " ""
+.SH NAME
+\fBssh-keyscan\fP
+\- gather SSH public keys
+.SH SYNOPSIS
+.br
+\fBssh-keyscan\fP
+[\fB\-46cDHv\fP]
+[\fB\-f\fP \fIfile\fP]
+[\fB\-p\fP \fIport\fP]
+[\fB\-T\fP \fItimeout\fP]
+[\fB\-t\fP \fItype\fP]
+[\fIhost\fP | \fIaddrlist\fP namelist]
+.SH DESCRIPTION
+\fBssh-keyscan\fP
+is a utility for gathering the public SSH host keys of a number of
+hosts.
+It was designed to aid in building and verifying
+\fIssh_known_hosts\fP
+files,
+the format of which is documented in
+\fBsshd\fP(8).
+\fBssh-keyscan\fP
+provides a minimal interface suitable for use by shell and perl
+scripts.
+
+\fBssh-keyscan\fP
+uses non-blocking socket I/O to contact as many hosts as possible in
+parallel, so it is very efficient.
+The keys from a domain of 1,000
+hosts can be collected in tens of seconds, even when some of those
+hosts are down or do not run
+\fBsshd\fP(8).
+For scanning, one does not need
+login access to the machines that are being scanned, nor does the
+scanning process involve any encryption.
+
+The options are as follows:
+.TP
+\fB\-4\fP
+Force
+\fBssh-keyscan\fP
+to use IPv4 addresses only.
+.TP
+\fB\-6\fP
+Force
+\fBssh-keyscan\fP
+to use IPv6 addresses only.
+.TP
+\fB\-c\fP
+Request certificates from target hosts instead of plain keys.
+.TP
+\fB\-D\fP
+Print keys found as SSHFP DNS records.
+The default is to print keys in a format usable as a
+\fBssh\fP(1)
+\fIknown_hosts\fP
+file.
+.TP
+\fB\-f\fP \fIfile\fP
+Read hosts or
+``addrlist namelist''
+pairs from
+\fIfile\fP,
+one per line.
+If
+`-'
+is supplied instead of a filename,
+\fBssh-keyscan\fP
+will read from the standard input.
+Input is expected in the format:
+
+1.2.3.4,1.2.4.4 name.my.domain,name,n.my.domain,n,1.2.3.4,1.2.4.4
+.br
+.TP
+\fB\-H\fP
+Hash all hostnames and addresses in the output.
+Hashed names may be used normally by
+\fBssh\fP(1)
+and
+\fBsshd\fP(8),
+but they do not reveal identifying information should the file's contents
+be disclosed.
+.TP
+\fB\-p\fP \fIport\fP
+Connect to
+\fIport\fP
+on the remote host.
+.TP
+\fB\-T\fP \fItimeout\fP
+Set the timeout for connection attempts.
+If
+\fItimeout\fP
+seconds have elapsed since a connection was initiated to a host or since the
+last time anything was read from that host, the connection is
+closed and the host in question considered unavailable.
+The default is 5 seconds.
+.TP
+\fB\-t\fP \fItype\fP
+Specify the type of the key to fetch from the scanned hosts.
+The possible values are
+``dsa'',
+``ecdsa'',
+``ed25519'',
+or
+``rsa''.
+Multiple values may be specified by separating them with commas.
+The default is to fetch
+``rsa'',
+``ecdsa'',
+and
+``ed25519''
+keys.
+.TP
+\fB\-v\fP
+Verbose mode:
+print debugging messages about progress.
+.PP
+
+If an ssh_known_hosts file is constructed using
+\fBssh-keyscan\fP
+without verifying the keys, users will be vulnerable to
+.IR man in the middle
+attacks.
+On the other hand, if the security model allows such a risk,
+\fBssh-keyscan\fP
+can help in the detection of tampered keyfiles or man in the middle
+attacks which have begun after the ssh_known_hosts file was created.
+.SH FILES
+\fI/data/data/com.termux/files/usr/etc/ssh/ssh_known_hosts\fP
+.SH EXAMPLES
+Print the RSA host key for machine
+\fIhostname\fP :
+
+Dl $ ssh-keyscan -t rsa hostname
+
+Find all hosts from the file
+\fIssh_hosts\fP
+which have new or different keys from those in the sorted file
+\fIssh_known_hosts\fP:
+
+$ ssh-keyscan -t rsa,dsa,ecdsa,ed25519 -f ssh_hosts | \e
+.br
+	sort -u - ssh_known_hosts | diff ssh_known_hosts -
+.br
+.SH SEE ALSO
+\fBssh\fP(1),
+\fBsshd\fP(8)
+
+\fIUsing DNS to Securely Publish Secure Shell (SSH) Key Fingerprints\fP, RFC 4255, 2006.
+.SH AUTHORS
+
+-nosplit
+
+David Mazieres <Mt dm@lcs.mit.edu>
+wrote the initial version, and
+
+Wayne Davison <Mt wayned@users.sourceforge.net>
+added support for protocol version 2.

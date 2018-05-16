@@ -1,0 +1,7 @@
+f9b79a42649602ce084d94766c94ecae  data/data/com.termux/files/usr/lib/pkgconfig/libffi.pc
+dd7b61f56e75a1d052dd10dc02ac4940  data/data/com.termux/files/usr/share/man/man3/ffi_call.3
+3fac156e21ef8e1746b25464de61e40b  data/data/com.termux/files/usr/share/man/man3/ffi_prep_cif_var.3
+375a858985ec2096671f484b1fe9b14b  data/data/com.termux/files/usr/share/man/man3/ffi.3
+634ea3ff80c805d513f31c111c5e6d36  data/data/com.termux/files/usr/share/man/man3/ffi_prep_cif.3
+50b1d0aa219240147b7e03a80e31f104  data/data/com.termux/files/usr/include/ffi.h
+55192f490a33d0029d6cf6f15e90094c  data/data/com.termux/files/usr/include/ffitarget.h

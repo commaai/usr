@@ -1,0 +1,11 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/bin
+/data/data/com.termux/files/usr/bin/csslint-0.6
+/data/data/com.termux/files/usr/bin/croco-0.6-config
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/libcroco-0.6.so

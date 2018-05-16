@@ -1,0 +1,44 @@
+Metadata-Version: 1.1
+Name: recordclass
+Version: 0.4.1
+Summary: Mutable variant of collections.namedtuple, which supports assignments
+Home-page: http://intellimath.bitbucket.org/recordclass
+Author: Zaur Shibzukhov
+Author-email: szport@gmail.com
+License: MIT License
+Download-URL: https://bitbucket.org/intellimath/recordclass
+Description: ===========
+        recordclass
+        ===========
+        
+        **recordclass** is `MIT Licensed <http://opensource.org/licenses/MIT>`_ python library.
+        It implements the type ``memoryslots`` and factory function ``recordclass`` 
+        in order to create record-like classes. 
+        
+        * ``memoryslots`` is ``tuple``-like type, which supports assignment operations. 
+        * ``recordclass`` is a factory function that create a "mutable" analog of 
+          ``collection.namedtuple``.
+        
+        This library actually is a "proof of concept" for the problem of fast "mutable" 
+        alternative of ``namedtuple``.
+        
+        Main repository for ``recordclass`` 
+        is on `bitbucket <https://bitbucket.org/intellimath/recordclass>`_.
+        
+        Here is also a simple `example <http://nbviewer.ipython.org/urls/bitbucket.org/intellimath/recordclass/raw/default/examples/what_is_recordclass.ipynb>`_.
+        
+Keywords: namedtuple,record,struct
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

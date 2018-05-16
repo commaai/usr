@@ -1,0 +1,16 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/share
+/data/data/com.termux/files/usr/share/man
+/data/data/com.termux/files/usr/share/man/man1
+/data/data/com.termux/files/usr/share/man/man1/less.1
+/data/data/com.termux/files/usr/share/man/man1/lessecho.1
+/data/data/com.termux/files/usr/share/man/man1/lesskey.1
+/data/data/com.termux/files/usr/bin
+/data/data/com.termux/files/usr/bin/less
+/data/data/com.termux/files/usr/bin/lesskey
+/data/data/com.termux/files/usr/bin/lessecho

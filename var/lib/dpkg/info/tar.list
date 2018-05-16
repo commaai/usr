@@ -1,0 +1,16 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/share
+/data/data/com.termux/files/usr/share/man
+/data/data/com.termux/files/usr/share/man/man1
+/data/data/com.termux/files/usr/share/man/man1/tar.1
+/data/data/com.termux/files/usr/share/man/man8
+/data/data/com.termux/files/usr/share/man/man8/rmt.8
+/data/data/com.termux/files/usr/bin
+/data/data/com.termux/files/usr/bin/tar
+/data/data/com.termux/files/usr/libexec
+/data/data/com.termux/files/usr/libexec/rmt

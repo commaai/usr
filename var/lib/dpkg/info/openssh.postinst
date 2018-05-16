@@ -1,0 +1,11 @@
+#!/data/data/com.termux/files/usr/bin/sh
+mkdir -p $HOME/.ssh
+touch $HOME/.ssh/authorized_keys
+chmod 700 $HOME/.ssh
+chmod 600 $HOME/.ssh/authorized_keys
+
+for a in rsa dsa ecdsa ed25519; do
+    KEYFILE=/data/data/com.termux/files/usr/etc/ssh/ssh_host_${a}_key
+    test ! -f $KEYFILE && ssh-keygen -N '' -t $a -f $KEYFILE
+done
+exit 0

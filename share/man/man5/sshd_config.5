@@ -1,0 +1,1808 @@
+.TH SSHD_CONFIG 5 "February 16 2018 " ""
+.SH NAME
+\fBsshd_config\fP
+\- OpenSSH SSH daemon configuration file
+.SH DESCRIPTION
+\fBsshd\fP(8)
+reads configuration data from
+\fI/data/data/com.termux/files/usr/etc/ssh/sshd_config\fP
+(or the file specified with
+\fB\-f\fP
+on the command line).
+The file contains keyword-argument pairs, one per line.
+For each keyword, the first obtained value will be used.
+Lines starting with
+`#'
+and empty lines are interpreted as comments.
+Arguments may optionally be enclosed in double quotes
+(\&")
+in order to represent arguments containing spaces.
+
+The possible
+keywords and their meanings are as follows (note that
+keywords are case-insensitive and arguments are case-sensitive):
+.TP
+\fBAcceptEnv\fP
+Specifies what environment variables sent by the client will be copied into
+the session's
+\fBenviron\fP(7).
+See
+\fBSendEnv\fP
+in
+\fBssh_config\fP(5)
+for how to configure the client.
+The
+.IR TERM
+environment variable is always sent whenever the client
+requests a pseudo-terminal as it is required by the protocol.
+Variables are specified by name, which may contain the wildcard characters
+`*'
+and
+`\&?'.
+Multiple environment variables may be separated by whitespace or spread
+across multiple
+\fBAcceptEnv\fP
+directives.
+Be warned that some environment variables could be used to bypass restricted
+user environments.
+For this reason, care should be taken in the use of this directive.
+The default is not to accept any environment variables.
+.TP
+\fBAddressFamily\fP
+Specifies which address family should be used by
+\fBsshd\fP(8).
+Valid arguments are
+\fBany\fP
+(the default),
+\fBinet\fP
+(use IPv4 only), or
+\fBinet6\fP
+(use IPv6 only).
+.TP
+\fBAllowAgentForwarding\fP
+Specifies whether
+\fBssh-agent\fP(1)
+forwarding is permitted.
+The default is
+\fByes\fP.
+Note that disabling agent forwarding does not improve security
+unless users are also denied shell access, as they can always install
+their own forwarders.
+.TP
+\fBAllowGroups\fP
+This keyword can be followed by a list of group name patterns, separated
+by spaces.
+If specified, login is allowed only for users whose primary
+group or supplementary group list matches one of the patterns.
+Only group names are valid; a numerical group ID is not recognized.
+By default, login is allowed for all groups.
+The allow/deny directives are processed in the following order:
+\fBDenyUsers\fP,
+\fBAllowUsers\fP,
+\fBDenyGroups\fP,
+and finally
+\fBAllowGroups\fP.
+
+See PATTERNS in
+\fBssh_config\fP(5)
+for more information on patterns.
+.TP
+\fBAllowStreamLocalForwarding\fP
+Specifies whether StreamLocal (Unix-domain socket) forwarding is permitted.
+The available options are
+\fByes\fP
+(the default)
+or
+\fBall\fP
+to allow StreamLocal forwarding,
+\fBno\fP
+to prevent all StreamLocal forwarding,
+\fBlocal\fP
+to allow local (from the perspective of
+\fBssh\fP(1))
+forwarding only or
+\fBremote\fP
+to allow remote forwarding only.
+Note that disabling StreamLocal forwarding does not improve security unless
+users are also denied shell access, as they can always install their
+own forwarders.
+.TP
+\fBAllowTcpForwarding\fP
+Specifies whether TCP forwarding is permitted.
+The available options are
+\fByes\fP
+(the default)
+or
+\fBall\fP
+to allow TCP forwarding,
+\fBno\fP
+to prevent all TCP forwarding,
+\fBlocal\fP
+to allow local (from the perspective of
+\fBssh\fP(1))
+forwarding only or
+\fBremote\fP
+to allow remote forwarding only.
+Note that disabling TCP forwarding does not improve security unless
+users are also denied shell access, as they can always install their
+own forwarders.
+.TP
+\fBAllowUsers\fP
+This keyword can be followed by a list of user name patterns, separated
+by spaces.
+If specified, login is allowed only for user names that
+match one of the patterns.
+Only user names are valid; a numerical user ID is not recognized.
+By default, login is allowed for all users.
+If the pattern takes the form USER@HOST then USER and HOST
+are separately checked, restricting logins to particular
+users from particular hosts.
+HOST criteria may additionally contain addresses to match in CIDR
+address/masklen format.
+The allow/deny directives are processed in the following order:
+\fBDenyUsers\fP,
+\fBAllowUsers\fP,
+\fBDenyGroups\fP,
+and finally
+\fBAllowGroups\fP.
+
+See PATTERNS in
+\fBssh_config\fP(5)
+for more information on patterns.
+.TP
+\fBAuthenticationMethods\fP
+Specifies the authentication methods that must be successfully completed
+for a user to be granted access.
+This option must be followed by one or more comma-separated lists of
+authentication method names, or by the single string
+\fBany\fP
+to indicate the default behaviour of accepting any single authentication
+method.
+If the default is overridden, then successful authentication requires
+completion of every method in at least one of these lists.
+
+For example,
+Qq publickey,password publickey,keyboard-interactive
+would require the user to complete public key authentication, followed by
+either password or keyboard interactive authentication.
+Only methods that are next in one or more lists are offered at each stage,
+so for this example it would not be possible to attempt password or
+keyboard-interactive authentication before public key.
+
+For keyboard interactive authentication it is also possible to
+restrict authentication to a specific device by appending a
+colon followed by the device identifier
+\fBbsdauth\fP,
+\fBpam\fP,
+or
+\fBskey\fP,
+depending on the server configuration.
+For example,
+Qq keyboard-interactive:bsdauth
+would restrict keyboard interactive authentication to the
+\fBbsdauth\fP
+device.
+
+If the publickey method is listed more than once,
+\fBsshd\fP(8)
+verifies that keys that have been used successfully are not reused for
+subsequent authentications.
+For example,
+Qq publickey,publickey
+requires successful authentication using two different public keys.
+
+Note that each authentication method listed should also be explicitly enabled
+in the configuration.
+
+The available authentication methods are:
+Qq gssapi-with-mic ,
+Qq hostbased ,
+Qq keyboard-interactive ,
+Qq none
+(used for access to password-less accounts when
+\fBPermitEmptyPassword\fP
+is enabled),
+Qq password
+and
+Qq publickey .
+.TP
+\fBAuthorizedKeysCommand\fP
+Specifies a program to be used to look up the user's public keys.
+The program must be owned by root, not writable by group or others and
+specified by an absolute path.
+Arguments to
+\fBAuthorizedKeysCommand\fP
+accept the tokens described in the
+.B TOKENS
+section.
+If no arguments are specified then the username of the target user is used.
+
+The program should produce on standard output zero or
+more lines of authorized_keys output (see
+.B AUTHORIZED_KEYS
+in
+\fBsshd\fP(8)) .
+If a key supplied by
+\fBAuthorizedKeysCommand\fP
+does not successfully authenticate
+and authorize the user then public key authentication continues using the usual
+\fBAuthorizedKeysFile\fP
+files.
+By default, no
+\fBAuthorizedKeysCommand\fP
+is run.
+.TP
+\fBAuthorizedKeysCommandUser\fP
+Specifies the user under whose account the
+\fBAuthorizedKeysCommand\fP
+is run.
+It is recommended to use a dedicated user that has no other role on the host
+than running authorized keys commands.
+If
+\fBAuthorizedKeysCommand\fP
+is specified but
+\fBAuthorizedKeysCommandUser\fP
+is not, then
+\fBsshd\fP(8)
+will refuse to start.
+.TP
+\fBAuthorizedKeysFile\fP
+Specifies the file that contains the public keys used for user authentication.
+The format is described in the
+.B AUTHORIZED_KEYS FILE FORMAT
+section of
+\fBsshd\fP(8).
+Arguments to
+\fBAuthorizedKeysFile\fP
+accept the tokens described in the
+.B TOKENS
+section.
+After expansion,
+\fBAuthorizedKeysFile\fP
+is taken to be an absolute path or one relative to the user's home
+directory.
+Multiple files may be listed, separated by whitespace.
+Alternately this option may be set to
+\fBnone\fP
+to skip checking for user keys in files.
+The default is
+Qq .ssh/authorized_keys .ssh/authorized_keys2 .
+.TP
+\fBAuthorizedPrincipalsCommand\fP
+Specifies a program to be used to generate the list of allowed
+certificate principals as per
+\fBAuthorizedPrincipalsFile\fP.
+The program must be owned by root, not writable by group or others and
+specified by an absolute path.
+Arguments to
+\fBAuthorizedPrincipalsCommand\fP
+accept the tokens described in the
+.B TOKENS
+section.
+If no arguments are specified then the username of the target user is used.
+
+The program should produce on standard output zero or
+more lines of
+\fBAuthorizedPrincipalsFile\fP
+output.
+If either
+\fBAuthorizedPrincipalsCommand\fP
+or
+\fBAuthorizedPrincipalsFile\fP
+is specified, then certificates offered by the client for authentication
+must contain a principal that is listed.
+By default, no
+\fBAuthorizedPrincipalsCommand\fP
+is run.
+.TP
+\fBAuthorizedPrincipalsCommandUser\fP
+Specifies the user under whose account the
+\fBAuthorizedPrincipalsCommand\fP
+is run.
+It is recommended to use a dedicated user that has no other role on the host
+than running authorized principals commands.
+If
+\fBAuthorizedPrincipalsCommand\fP
+is specified but
+\fBAuthorizedPrincipalsCommandUser\fP
+is not, then
+\fBsshd\fP(8)
+will refuse to start.
+.TP
+\fBAuthorizedPrincipalsFile\fP
+Specifies a file that lists principal names that are accepted for
+certificate authentication.
+When using certificates signed by a key listed in
+\fBTrustedUserCAKeys\fP,
+this file lists names, one of which must appear in the certificate for it
+to be accepted for authentication.
+Names are listed one per line preceded by key options (as described in
+.B AUTHORIZED_KEYS FILE FORMAT
+in
+\fBsshd\fP(8)) .
+Empty lines and comments starting with
+`#'
+are ignored.
+
+Arguments to
+\fBAuthorizedPrincipalsFile\fP
+accept the tokens described in the
+.B TOKENS
+section.
+After expansion,
+\fBAuthorizedPrincipalsFile\fP
+is taken to be an absolute path or one relative to the user's home directory.
+The default is
+\fBnone\fP,
+i.e. not to use a principals file \(en in this case, the username
+of the user must appear in a certificate's principals list for it to be
+accepted.
+
+Note that
+\fBAuthorizedPrincipalsFile\fP
+is only used when authentication proceeds using a CA listed in
+\fBTrustedUserCAKeys\fP
+and is not consulted for certification authorities trusted via
+\fI~/.ssh/authorized_keys\fP,
+though the
+\fBprincipals=\fP
+key option offers a similar facility (see
+\fBsshd\fP(8)
+for details).
+.TP
+\fBBanner\fP
+The contents of the specified file are sent to the remote user before
+authentication is allowed.
+If the argument is
+\fBnone\fP
+then no banner is displayed.
+By default, no banner is displayed.
+.TP
+\fBChallengeResponseAuthentication\fP
+Specifies whether challenge-response authentication is allowed (e.g. via
+PAM or through authentication styles supported in
+\fBlogin.conf\fP(5))
+The default is
+\fByes\fP.
+.TP
+\fBChrootDirectory\fP
+Specifies the pathname of a directory to
+\fBchroot\fP(2)
+to after authentication.
+At session startup
+\fBsshd\fP(8)
+checks that all components of the pathname are root-owned directories
+which are not writable by any other user or group.
+After the chroot,
+\fBsshd\fP(8)
+changes the working directory to the user's home directory.
+Arguments to
+\fBChrootDirectory\fP
+accept the tokens described in the
+.B TOKENS
+section.
+
+The
+\fBChrootDirectory\fP
+must contain the necessary files and directories to support the
+user's session.
+For an interactive session this requires at least a shell, typically
+\fBsh\fP(1),
+and basic
+\fI/dev\fP
+nodes such as
+\fBnull\fP(4),
+\fBzero\fP(4),
+\fBstdin\fP(4),
+\fBstdout\fP(4),
+\fBstderr\fP(4),
+and
+\fBtty\fP(4)
+devices.
+For file transfer sessions using SFTP
+no additional configuration of the environment is necessary if the in-process
+sftp-server is used,
+though sessions which use logging may require
+\fI/dev/log\fP
+inside the chroot directory on some operating systems (see
+\fBsftp-server\fP(8)
+for details).
+
+For safety, it is very important that the directory hierarchy be
+prevented from modification by other processes on the system (especially
+those outside the jail).
+Misconfiguration can lead to unsafe environments which
+\fBsshd\fP(8)
+cannot detect.
+
+The default is
+\fBnone\fP,
+indicating not to
+\fBchroot\fP(2).
+.TP
+\fBCiphers\fP
+Specifies the ciphers allowed.
+Multiple ciphers must be comma-separated.
+If the specified value begins with a
+`+'
+character, then the specified ciphers will be appended to the default set
+instead of replacing them.
+If the specified value begins with a
+`-'
+character, then the specified ciphers (including wildcards) will be removed
+from the default set instead of replacing them.
+
+The supported ciphers are:
+
+.IP
+3des-cbc
+.IP
+aes128-cbc
+.IP
+aes192-cbc
+.IP
+aes256-cbc
+.IP
+aes128-ctr
+.IP
+aes192-ctr
+.IP
+aes256-ctr
+.IP
+aes128-gcm@openssh.com
+.IP
+aes256-gcm@openssh.com
+.IP
+chacha20-poly1305@openssh.com
+
+The default is:
+
+chacha20-poly1305@openssh.com,
+.br
+aes128-ctr,aes192-ctr,aes256-ctr,
+.br
+aes128-gcm@openssh.com,aes256-gcm@openssh.com
+.br
+
+The list of available ciphers may also be obtained using
+Qq ssh -Q cipher .
+.TP
+\fBClientAliveCountMax\fP
+Sets the number of client alive messages which may be sent without
+\fBsshd\fP(8)
+receiving any messages back from the client.
+If this threshold is reached while client alive messages are being sent,
+sshd will disconnect the client, terminating the session.
+It is important to note that the use of client alive messages is very
+different from
+\fBTCPKeepAlive\fP.
+The client alive messages are sent through the encrypted channel
+and therefore will not be spoofable.
+The TCP keepalive option enabled by
+\fBTCPKeepAlive\fP
+is spoofable.
+The client alive mechanism is valuable when the client or
+server depend on knowing when a connection has become inactive.
+
+The default value is 3.
+If
+\fBClientAliveInterval\fP
+is set to 15, and
+\fBClientAliveCountMax\fP
+is left at the default, unresponsive SSH clients
+will be disconnected after approximately 45 seconds.
+.TP
+\fBClientAliveInterval\fP
+Sets a timeout interval in seconds after which if no data has been received
+from the client,
+\fBsshd\fP(8)
+will send a message through the encrypted
+channel to request a response from the client.
+The default
+is 0, indicating that these messages will not be sent to the client.
+.TP
+\fBCompression\fP
+Specifies whether compression is enabled after
+the user has authenticated successfully.
+The argument must be
+\fByes\fP,
+\fBdelayed\fP
+(a legacy synonym for
+\fByes\fP)
+or
+\fBno\fP.
+The default is
+\fByes\fP.
+.TP
+\fBDenyGroups\fP
+This keyword can be followed by a list of group name patterns, separated
+by spaces.
+Login is disallowed for users whose primary group or supplementary
+group list matches one of the patterns.
+Only group names are valid; a numerical group ID is not recognized.
+By default, login is allowed for all groups.
+The allow/deny directives are processed in the following order:
+\fBDenyUsers\fP,
+\fBAllowUsers\fP,
+\fBDenyGroups\fP,
+and finally
+\fBAllowGroups\fP.
+
+See PATTERNS in
+\fBssh_config\fP(5)
+for more information on patterns.
+.TP
+\fBDenyUsers\fP
+This keyword can be followed by a list of user name patterns, separated
+by spaces.
+Login is disallowed for user names that match one of the patterns.
+Only user names are valid; a numerical user ID is not recognized.
+By default, login is allowed for all users.
+If the pattern takes the form USER@HOST then USER and HOST
+are separately checked, restricting logins to particular
+users from particular hosts.
+HOST criteria may additionally contain addresses to match in CIDR
+address/masklen format.
+The allow/deny directives are processed in the following order:
+\fBDenyUsers\fP,
+\fBAllowUsers\fP,
+\fBDenyGroups\fP,
+and finally
+\fBAllowGroups\fP.
+
+See PATTERNS in
+\fBssh_config\fP(5)
+for more information on patterns.
+.TP
+\fBDisableForwarding\fP
+Disables all forwarding features, including X11,
+\fBssh-agent\fP(1),
+TCP and StreamLocal.
+This option overrides all other forwarding-related options and may
+simplify restricted configurations.
+.TP
+\fBExposeAuthInfo\fP
+Writes a temporary file containing a list of authentication methods and
+public credentials (e.g. keys) used to authenticate the user.
+The location of the file is exposed to the user session through the
+.IR SSH_USER_AUTH
+environment variable.
+The default is
+\fBno\fP.
+.TP
+\fBFingerprintHash\fP
+Specifies the hash algorithm used when logging key fingerprints.
+Valid options are:
+\fBmd5\fP
+and
+\fBsha256\fP.
+The default is
+\fBsha256\fP.
+.TP
+\fBForceCommand\fP
+Forces the execution of the command specified by
+\fBForceCommand\fP,
+ignoring any command supplied by the client and
+\fI~/.ssh/rc\fP
+if present.
+The command is invoked by using the user's login shell with the -c option.
+This applies to shell, command, or subsystem execution.
+It is most useful inside a
+\fBMatch\fP
+block.
+The command originally supplied by the client is available in the
+.IR SSH_ORIGINAL_COMMAND
+environment variable.
+Specifying a command of
+\fBinternal-sftp\fP
+will force the use of an in-process SFTP server that requires no support
+files when used with
+\fBChrootDirectory\fP.
+The default is
+\fBnone\fP.
+.TP
+\fBGatewayPorts\fP
+Specifies whether remote hosts are allowed to connect to ports
+forwarded for the client.
+By default,
+\fBsshd\fP(8)
+binds remote port forwardings to the loopback address.
+This prevents other remote hosts from connecting to forwarded ports.
+\fBGatewayPorts\fP
+can be used to specify that sshd
+should allow remote port forwardings to bind to non-loopback addresses, thus
+allowing other hosts to connect.
+The argument may be
+\fBno\fP
+to force remote port forwardings to be available to the local host only,
+\fByes\fP
+to force remote port forwardings to bind to the wildcard address, or
+\fBclientspecified\fP
+to allow the client to select the address to which the forwarding is bound.
+The default is
+\fBno\fP.
+.TP
+\fBGSSAPIAuthentication\fP
+Specifies whether user authentication based on GSSAPI is allowed.
+The default is
+\fBno\fP.
+.TP
+\fBGSSAPICleanupCredentials\fP
+Specifies whether to automatically destroy the user's credentials cache
+on logout.
+The default is
+\fByes\fP.
+.TP
+\fBGSSAPIStrictAcceptorCheck\fP
+Determines whether to be strict about the identity of the GSSAPI acceptor
+a client authenticates against.
+If set to
+\fByes\fP
+then the client must authenticate against the host
+service on the current hostname.
+If set to
+\fBno\fP
+then the client may authenticate against any service key stored in the
+machine's default store.
+This facility is provided to assist with operation on multi homed machines.
+The default is
+\fByes\fP.
+.TP
+\fBHostbasedAcceptedKeyTypes\fP
+Specifies the key types that will be accepted for hostbased authentication
+as a comma-separated pattern list.
+Alternately if the specified value begins with a
+`+'
+character, then the specified key types will be appended to the default set
+instead of replacing them.
+If the specified value begins with a
+`-'
+character, then the specified key types (including wildcards) will be removed
+from the default set instead of replacing them.
+The default for this option is:
+
+ecdsa-sha2-nistp256-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp384-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp521-cert-v01@openssh.com,
+.br
+ssh-ed25519-cert-v01@openssh.com,
+.br
+ssh-rsa-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,
+.br
+ssh-ed25519,ssh-rsa
+.br
+
+The list of available key types may also be obtained using
+Qq ssh -Q key .
+.TP
+\fBHostbasedAuthentication\fP
+Specifies whether rhosts or /etc/hosts.equiv authentication together
+with successful public key client host authentication is allowed
+(host-based authentication).
+The default is
+\fBno\fP.
+.TP
+\fBHostbasedUsesNameFromPacketOnly\fP
+Specifies whether or not the server will attempt to perform a reverse
+name lookup when matching the name in the
+\fI~/.shosts\fP,
+\fI~/.rhosts\fP,
+and
+\fI/etc/hosts.equiv\fP
+files during
+\fBHostbasedAuthentication\fP.
+A setting of
+\fByes\fP
+means that
+\fBsshd\fP(8)
+uses the name supplied by the client rather than
+attempting to resolve the name from the TCP connection itself.
+The default is
+\fBno\fP.
+.TP
+\fBHostCertificate\fP
+Specifies a file containing a public host certificate.
+The certificate's public key must match a private host key already specified
+by
+\fBHostKey\fP.
+The default behaviour of
+\fBsshd\fP(8)
+is not to load any certificates.
+.TP
+\fBHostKey\fP
+Specifies a file containing a private host key
+used by SSH.
+The defaults are
+\fI/data/data/com.termux/files/usr/etc/ssh/ssh_host_ecdsa_key\fP,
+\fI/data/data/com.termux/files/usr/etc/ssh/ssh_host_ed25519_key\fP
+and
+\fI/data/data/com.termux/files/usr/etc/ssh/ssh_host_rsa_key\fP.
+
+Note that
+\fBsshd\fP(8)
+will refuse to use a file if it is group/world-accessible
+and that the
+\fBHostKeyAlgorithms\fP
+option restricts which of the keys are actually used by
+\fBsshd\fP(8).
+
+It is possible to have multiple host key files.
+It is also possible to specify public host key files instead.
+In this case operations on the private key will be delegated
+to an
+\fBssh-agent\fP(1).
+.TP
+\fBHostKeyAgent\fP
+Identifies the UNIX-domain socket used to communicate
+with an agent that has access to the private host keys.
+If the string
+Qq SSH_AUTH_SOCK
+is specified, the location of the socket will be read from the
+.IR SSH_AUTH_SOCK
+environment variable.
+.TP
+\fBHostKeyAlgorithms\fP
+Specifies the host key algorithms
+that the server offers.
+The default for this option is:
+
+ecdsa-sha2-nistp256-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp384-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp521-cert-v01@openssh.com,
+.br
+ssh-ed25519-cert-v01@openssh.com,
+.br
+ssh-rsa-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,
+.br
+ssh-ed25519,ssh-rsa
+.br
+
+The list of available key types may also be obtained using
+Qq ssh -Q key .
+.TP
+\fBIgnoreRhosts\fP
+Specifies that
+\fI\&.rhosts\fP
+and
+\fI\&.shosts\fP
+files will not be used in
+\fBHostbasedAuthentication\fP.
+
+\fI/etc/hosts.equiv\fP
+and
+\fI/data/data/com.termux/files/usr/etc/ssh/shosts.equiv\fP
+are still used.
+The default is
+\fByes\fP.
+.TP
+\fBIgnoreUserKnownHosts\fP
+Specifies whether
+\fBsshd\fP(8)
+should ignore the user's
+\fI~/.ssh/known_hosts\fP
+during
+\fBHostbasedAuthentication\fP
+and use only the system-wide known hosts file
+\fI/etc/ssh/known_hosts\fP.
+The default is
+\fBno\fP.
+.TP
+\fBIPQoS\fP
+Specifies the IPv4 type-of-service or DSCP class for the connection.
+Accepted values are
+\fBaf11\fP,
+\fBaf12\fP,
+\fBaf13\fP,
+\fBaf21\fP,
+\fBaf22\fP,
+\fBaf23\fP,
+\fBaf31\fP,
+\fBaf32\fP,
+\fBaf33\fP,
+\fBaf41\fP,
+\fBaf42\fP,
+\fBaf43\fP,
+\fBcs0\fP,
+\fBcs1\fP,
+\fBcs2\fP,
+\fBcs3\fP,
+\fBcs4\fP,
+\fBcs5\fP,
+\fBcs6\fP,
+\fBcs7\fP,
+\fBef\fP,
+\fBlowdelay\fP,
+\fBthroughput\fP,
+\fBreliability\fP,
+a numeric value, or
+\fBnone\fP
+to use the operating system default.
+This option may take one or two arguments, separated by whitespace.
+If one argument is specified, it is used as the packet class unconditionally.
+If two values are specified, the first is automatically selected for
+interactive sessions and the second for non-interactive sessions.
+The default is
+\fBlowdelay\fP
+for interactive sessions and
+\fBthroughput\fP
+for non-interactive sessions.
+.TP
+\fBKbdInteractiveAuthentication\fP
+Specifies whether to allow keyboard-interactive authentication.
+The argument to this keyword must be
+\fByes\fP
+or
+\fBno\fP.
+The default is to use whatever value
+\fBChallengeResponseAuthentication\fP
+is set to
+(by default
+\fByes\fP).
+.TP
+\fBKerberosAuthentication\fP
+Specifies whether the password provided by the user for
+\fBPasswordAuthentication\fP
+will be validated through the Kerberos KDC.
+To use this option, the server needs a
+Kerberos servtab which allows the verification of the KDC's identity.
+The default is
+\fBno\fP.
+.TP
+\fBKerberosGetAFSToken\fP
+If AFS is active and the user has a Kerberos 5 TGT, attempt to acquire
+an AFS token before accessing the user's home directory.
+The default is
+\fBno\fP.
+.TP
+\fBKerberosOrLocalPasswd\fP
+If password authentication through Kerberos fails then
+the password will be validated via any additional local mechanism
+such as
+\fI/etc/passwd\fP.
+The default is
+\fByes\fP.
+.TP
+\fBKerberosTicketCleanup\fP
+Specifies whether to automatically destroy the user's ticket cache
+file on logout.
+The default is
+\fByes\fP.
+.TP
+\fBKexAlgorithms\fP
+Specifies the available KEX (Key Exchange) algorithms.
+Multiple algorithms must be comma-separated.
+Alternately if the specified value begins with a
+`+'
+character, then the specified methods will be appended to the default set
+instead of replacing them.
+If the specified value begins with a
+`-'
+character, then the specified methods (including wildcards) will be removed
+from the default set instead of replacing them.
+The supported algorithms are:
+
+.IP
+curve25519-sha256
+.IP
+curve25519-sha256@libssh.org
+.IP
+diffie-hellman-group1-sha1
+.IP
+diffie-hellman-group14-sha1
+.IP
+diffie-hellman-group14-sha256
+.IP
+diffie-hellman-group16-sha512
+.IP
+diffie-hellman-group18-sha512
+.IP
+diffie-hellman-group-exchange-sha1
+.IP
+diffie-hellman-group-exchange-sha256
+.IP
+ecdh-sha2-nistp256
+.IP
+ecdh-sha2-nistp384
+.IP
+ecdh-sha2-nistp521
+
+The default is:
+
+curve25519-sha256,curve25519-sha256@libssh.org,
+.br
+ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,
+.br
+diffie-hellman-group-exchange-sha256,
+.br
+diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,
+.br
+diffie-hellman-group14-sha256,diffie-hellman-group14-sha1
+.br
+
+The list of available key exchange algorithms may also be obtained using
+Qq ssh -Q kex .
+.TP
+\fBListenAddress\fP
+Specifies the local addresses
+\fBsshd\fP(8)
+should listen on.
+The following forms may be used:
+
+.IP
+\fBListenAddress\fP
+\fIhostname\fP | \fIaddress\fP
+[\fBrdomain\fP \fIdomain\fP]
+.IP
+\fBListenAddress\fP
+\fIhostname\fP:port
+[\fBrdomain\fP \fIdomain\fP]
+.IP
+\fBListenAddress\fP
+\fIIPv4_address\fP:port
+[\fBrdomain\fP \fIdomain\fP]
+.IP
+\fBListenAddress\fP
+[\fIhostname\fP | \fIaddress\fP]:\fIport\fP
+[\fBrdomain\fP \fIdomain\fP]
+
+The optional
+\fBrdomain\fP
+qualifier requests
+\fBsshd\fP(8)
+listen in an explicit routing domain.
+If
+\fIport\fP
+is not specified,
+sshd will listen on the address and all
+\fBPort\fP
+options specified.
+The default is to listen on all local addresses on the current default
+routing domain.
+Multiple
+\fBListenAddress\fP
+options are permitted.
+For more information on routing domains, see
+\fBrdomain\fP(4).
+.TP
+\fBLoginGraceTime\fP
+The server disconnects after this time if the user has not
+successfully logged in.
+If the value is 0, there is no time limit.
+The default is 120 seconds.
+.TP
+\fBLogLevel\fP
+Gives the verbosity level that is used when logging messages from
+\fBsshd\fP(8).
+The possible values are:
+QUIET, FATAL, ERROR, INFO, VERBOSE, DEBUG, DEBUG1, DEBUG2, and DEBUG3.
+The default is INFO.
+DEBUG and DEBUG1 are equivalent.
+DEBUG2 and DEBUG3 each specify higher levels of debugging output.
+Logging with a DEBUG level violates the privacy of users and is not recommended.
+.TP
+\fBMACs\fP
+Specifies the available MAC (message authentication code) algorithms.
+The MAC algorithm is used for data integrity protection.
+Multiple algorithms must be comma-separated.
+If the specified value begins with a
+`+'
+character, then the specified algorithms will be appended to the default set
+instead of replacing them.
+If the specified value begins with a
+`-'
+character, then the specified algorithms (including wildcards) will be removed
+from the default set instead of replacing them.
+
+The algorithms that contain
+Qq -etm
+calculate the MAC after encryption (encrypt-then-mac).
+These are considered safer and their use recommended.
+The supported MACs are:
+
+.IP
+hmac-md5
+.IP
+hmac-md5-96
+.IP
+hmac-sha1
+.IP
+hmac-sha1-96
+.IP
+hmac-sha2-256
+.IP
+hmac-sha2-512
+.IP
+umac-64@openssh.com
+.IP
+umac-128@openssh.com
+.IP
+hmac-md5-etm@openssh.com
+.IP
+hmac-md5-96-etm@openssh.com
+.IP
+hmac-sha1-etm@openssh.com
+.IP
+hmac-sha1-96-etm@openssh.com
+.IP
+hmac-sha2-256-etm@openssh.com
+.IP
+hmac-sha2-512-etm@openssh.com
+.IP
+umac-64-etm@openssh.com
+.IP
+umac-128-etm@openssh.com
+
+The default is:
+
+umac-64-etm@openssh.com,umac-128-etm@openssh.com,
+.br
+hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,
+.br
+hmac-sha1-etm@openssh.com,
+.br
+umac-64@openssh.com,umac-128@openssh.com,
+.br
+hmac-sha2-256,hmac-sha2-512,hmac-sha1
+.br
+
+The list of available MAC algorithms may also be obtained using
+Qq ssh -Q mac .
+.TP
+\fBMatch\fP
+Introduces a conditional block.
+If all of the criteria on the
+\fBMatch\fP
+line are satisfied, the keywords on the following lines override those
+set in the global section of the config file, until either another
+\fBMatch\fP
+line or the end of the file.
+If a keyword appears in multiple
+\fBMatch\fP
+blocks that are satisfied, only the first instance of the keyword is
+applied.
+
+The arguments to
+\fBMatch\fP
+are one or more criteria-pattern pairs or the single token
+\fBAll\fP
+which matches all criteria.
+The available criteria are
+\fBUser\fP,
+\fBGroup\fP,
+\fBHost\fP,
+\fBLocalAddress\fP,
+\fBLocalPort\fP,
+\fBRDomain\fP,
+and
+\fBAddress\fP
+(with
+\fBRDomain\fP
+representing the
+\fBrdomain\fP(4)
+on which the connection was received.)
+
+The match patterns may consist of single entries or comma-separated
+lists and may use the wildcard and negation operators described in the
+.B PATTERNS
+section of
+\fBssh_config\fP(5).
+
+The patterns in an
+\fBAddress\fP
+criteria may additionally contain addresses to match in CIDR
+address/masklen format,
+such as 192.0.2.0/24 or 2001:db8::/32.
+Note that the mask length provided must be consistent with the address -
+it is an error to specify a mask length that is too long for the address
+or one with bits set in this host portion of the address.
+For example, 192.0.2.0/33 and 192.0.2.0/8, respectively.
+
+Only a subset of keywords may be used on the lines following a
+\fBMatch\fP
+keyword.
+Available keywords are
+\fBAcceptEnv\fP,
+\fBAllowAgentForwarding\fP,
+\fBAllowGroups\fP,
+\fBAllowStreamLocalForwarding\fP,
+\fBAllowTcpForwarding\fP,
+\fBAllowUsers\fP,
+\fBAuthenticationMethods\fP,
+\fBAuthorizedKeysCommand\fP,
+\fBAuthorizedKeysCommandUser\fP,
+\fBAuthorizedKeysFile\fP,
+\fBAuthorizedPrincipalsCommand\fP,
+\fBAuthorizedPrincipalsCommandUser\fP,
+\fBAuthorizedPrincipalsFile\fP,
+\fBBanner\fP,
+\fBChrootDirectory\fP,
+\fBClientAliveCountMax\fP,
+\fBClientAliveInterval\fP,
+\fBDenyGroups\fP,
+\fBDenyUsers\fP,
+\fBForceCommand\fP,
+\fBGatewayPorts\fP,
+\fBGSSAPIAuthentication\fP,
+\fBHostbasedAcceptedKeyTypes\fP,
+\fBHostbasedAuthentication\fP,
+\fBHostbasedUsesNameFromPacketOnly\fP,
+\fBIPQoS\fP,
+\fBKbdInteractiveAuthentication\fP,
+\fBKerberosAuthentication\fP,
+\fBLogLevel\fP,
+\fBMaxAuthTries\fP,
+\fBMaxSessions\fP,
+\fBPasswordAuthentication\fP,
+\fBPermitEmptyPasswords\fP,
+\fBPermitOpen\fP,
+\fBPermitRootLogin\fP,
+\fBPermitTTY\fP,
+\fBPermitTunnel\fP,
+\fBPermitUserRC\fP,
+\fBPubkeyAcceptedKeyTypes\fP,
+\fBPubkeyAuthentication\fP,
+\fBRekeyLimit\fP,
+\fBRevokedKeys\fP,
+\fBRDomain\fP,
+\fBStreamLocalBindMask\fP,
+\fBStreamLocalBindUnlink\fP,
+\fBTrustedUserCAKeys\fP,
+\fBX11DisplayOffset\fP,
+\fBX11Forwarding\fP
+and
+\fBX11UseLocalHost\fP.
+.TP
+\fBMaxAuthTries\fP
+Specifies the maximum number of authentication attempts permitted per
+connection.
+Once the number of failures reaches half this value,
+additional failures are logged.
+The default is 6.
+.TP
+\fBMaxSessions\fP
+Specifies the maximum number of open shell, login or subsystem (e.g. sftp)
+sessions permitted per network connection.
+Multiple sessions may be established by clients that support connection
+multiplexing.
+Setting
+\fBMaxSessions\fP
+to 1 will effectively disable session multiplexing, whereas setting it to 0
+will prevent all shell, login and subsystem sessions while still permitting
+forwarding.
+The default is 10.
+.TP
+\fBMaxStartups\fP
+Specifies the maximum number of concurrent unauthenticated connections to the
+SSH daemon.
+Additional connections will be dropped until authentication succeeds or the
+\fBLoginGraceTime\fP
+expires for a connection.
+The default is 10:30:100.
+
+Alternatively, random early drop can be enabled by specifying
+the three colon separated values
+start:rate:full (e.g. "10:30:60").
+\fBsshd\fP(8)
+will refuse connection attempts with a probability of rate/100 (30%)
+if there are currently start (10) unauthenticated connections.
+The probability increases linearly and all connection attempts
+are refused if the number of unauthenticated connections reaches full (60).
+.TP
+\fBPasswordAuthentication\fP
+Specifies whether password authentication is allowed.
+The default is
+\fByes\fP.
+.TP
+\fBPermitEmptyPasswords\fP
+When password authentication is allowed, it specifies whether the
+server allows login to accounts with empty password strings.
+The default is
+\fBno\fP.
+.TP
+\fBPermitOpen\fP
+Specifies the destinations to which TCP port forwarding is permitted.
+The forwarding specification must be one of the following forms:
+
+.IP
+\fBPermitOpen\fP
+\fIhost\fP:port
+.IP
+\fBPermitOpen\fP
+\fIIPv4_addr\fP:port
+.IP
+\fBPermitOpen\fP
+\fI\&[\fPIPv6_addr\&]:port
+
+Multiple forwards may be specified by separating them with whitespace.
+An argument of
+\fBany\fP
+can be used to remove all restrictions and permit any forwarding requests.
+An argument of
+\fBnone\fP
+can be used to prohibit all forwarding requests.
+The wildcard
+`*'
+can be used for host or port to allow all hosts or ports, respectively.
+By default all port forwarding requests are permitted.
+.TP
+\fBPermitRootLogin\fP
+Specifies whether root can log in using
+\fBssh\fP(1).
+The argument must be
+\fByes\fP,
+\fBprohibit-password\fP,
+\fBforced-commands-only\fP,
+or
+\fBno\fP.
+The default is
+\fBprohibit-password\fP.
+
+If this option is set to
+\fBprohibit-password\fP
+(or its deprecated alias,
+\fBwithout-password\fP),
+password and keyboard-interactive authentication are disabled for root.
+
+If this option is set to
+\fBforced-commands-only\fP,
+root login with public key authentication will be allowed,
+but only if the
+\fIcommand\fP
+option has been specified
+(which may be useful for taking remote backups even if root login is
+normally not allowed).
+All other authentication methods are disabled for root.
+
+If this option is set to
+\fBno\fP,
+root is not allowed to log in.
+.TP
+\fBPermitTTY\fP
+Specifies whether
+\fBpty\fP(4)
+allocation is permitted.
+The default is
+\fByes\fP.
+.TP
+\fBPermitTunnel\fP
+Specifies whether
+\fBtun\fP(4)
+device forwarding is allowed.
+The argument must be
+\fByes\fP,
+\fBpoint-to-point\fP
+(layer 3),
+\fBethernet\fP
+(layer 2), or
+\fBno\fP.
+Specifying
+\fByes\fP
+permits both
+\fBpoint-to-point\fP
+and
+\fBethernet\fP.
+The default is
+\fBno\fP.
+
+Independent of this setting, the permissions of the selected
+\fBtun\fP(4)
+device must allow access to the user.
+.TP
+\fBPermitUserEnvironment\fP
+Specifies whether
+\fI~/.ssh/environment\fP
+and
+\fBenvironment=\fP
+options in
+\fI~/.ssh/authorized_keys\fP
+are processed by
+\fBsshd\fP(8).
+The default is
+\fBno\fP.
+Enabling environment processing may enable users to bypass access
+restrictions in some configurations using mechanisms such as
+.IR LD_PRELOAD .
+.TP
+\fBPermitUserRC\fP
+Specifies whether any
+\fI~/.ssh/rc\fP
+file is executed.
+The default is
+\fByes\fP.
+.TP
+\fBPidFile\fP
+Specifies the file that contains the process ID of the
+SSH daemon, or
+\fBnone\fP
+to not write one.
+The default is
+\fI/data/data/com.termux/files/usr/var/run/sshd.pid\fP.
+.TP
+\fBPort\fP
+Specifies the port number that
+\fBsshd\fP(8)
+listens on.
+The default is 8022.
+Multiple options of this type are permitted.
+See also
+\fBListenAddress\fP.
+.TP
+\fBPrintLastLog\fP
+Specifies whether
+\fBsshd\fP(8)
+should print the date and time of the last user login when a user logs
+in interactively.
+The default is
+\fByes\fP.
+.TP
+\fBPrintMotd\fP
+Specifies whether
+\fBsshd\fP(8)
+should print
+\fI/etc/motd\fP
+when a user logs in interactively.
+(On some systems it is also printed by the shell,
+\fI/etc/profile\fP,
+or equivalent.)
+The default is
+\fByes\fP.
+.TP
+\fBPubkeyAcceptedKeyTypes\fP
+Specifies the key types that will be accepted for public key authentication
+as a comma-separated pattern list.
+Alternately if the specified value begins with a
+`+'
+character, then the specified key types will be appended to the default set
+instead of replacing them.
+If the specified value begins with a
+`-'
+character, then the specified key types (including wildcards) will be removed
+from the default set instead of replacing them.
+The default for this option is:
+
+ecdsa-sha2-nistp256-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp384-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp521-cert-v01@openssh.com,
+.br
+ssh-ed25519-cert-v01@openssh.com,
+.br
+ssh-rsa-cert-v01@openssh.com,
+.br
+ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,
+.br
+ssh-ed25519,ssh-rsa
+.br
+
+The list of available key types may also be obtained using
+Qq ssh -Q key .
+.TP
+\fBPubkeyAuthentication\fP
+Specifies whether public key authentication is allowed.
+The default is
+\fByes\fP.
+.TP
+\fBRekeyLimit\fP
+Specifies the maximum amount of data that may be transmitted before the
+session key is renegotiated, optionally followed a maximum amount of
+time that may pass before the session key is renegotiated.
+The first argument is specified in bytes and may have a suffix of
+`K',
+`M',
+or
+`G'
+to indicate Kilobytes, Megabytes, or Gigabytes, respectively.
+The default is between
+`1G'
+and
+`4G',
+depending on the cipher.
+The optional second value is specified in seconds and may use any of the
+units documented in the
+.B TIME FORMATS
+section.
+The default value for
+\fBRekeyLimit\fP
+is
+\fBdefault\fP none ,
+which means that rekeying is performed after the cipher's default amount
+of data has been sent or received and no time based rekeying is done.
+.TP
+\fBRevokedKeys\fP
+Specifies revoked public keys file, or
+\fBnone\fP
+to not use one.
+Keys listed in this file will be refused for public key authentication.
+Note that if this file is not readable, then public key authentication will
+be refused for all users.
+Keys may be specified as a text file, listing one public key per line, or as
+an OpenSSH Key Revocation List (KRL) as generated by
+\fBssh-keygen\fP(1).
+For more information on KRLs, see the KEY REVOCATION LISTS section in
+\fBssh-keygen\fP(1).
+.TP
+\fBRDomain\fP
+Specifies an explicit routing domain that is applied after authentication
+has completed.
+The user session, as well and any forwarded or listening IP sockets,
+will be bound to this
+\fBrdomain\fP(4).
+If the routing domain is set to
+\fB\&%D\fP,
+then the domain in which the incoming connection was received will be applied.
+.TP
+\fBStreamLocalBindMask\fP
+Sets the octal file creation mode mask
+(umask)
+used when creating a Unix-domain socket file for local or remote
+port forwarding.
+This option is only used for port forwarding to a Unix-domain socket file.
+
+The default value is 0177, which creates a Unix-domain socket file that is
+readable and writable only by the owner.
+Note that not all operating systems honor the file mode on Unix-domain
+socket files.
+.TP
+\fBStreamLocalBindUnlink\fP
+Specifies whether to remove an existing Unix-domain socket file for local
+or remote port forwarding before creating a new one.
+If the socket file already exists and
+\fBStreamLocalBindUnlink\fP
+is not enabled,
+\fBsshd\fP
+will be unable to forward the port to the Unix-domain socket file.
+This option is only used for port forwarding to a Unix-domain socket file.
+
+The argument must be
+\fByes\fP
+or
+\fBno\fP.
+The default is
+\fBno\fP.
+.TP
+\fBStrictModes\fP
+Specifies whether
+\fBsshd\fP(8)
+should check file modes and ownership of the
+user's files and home directory before accepting login.
+This is normally desirable because novices sometimes accidentally leave their
+directory or files world-writable.
+The default is
+\fByes\fP.
+Note that this does not apply to
+\fBChrootDirectory\fP,
+whose permissions and ownership are checked unconditionally.
+.TP
+\fBSubsystem\fP
+Configures an external subsystem (e.g. file transfer daemon).
+Arguments should be a subsystem name and a command (with optional arguments)
+to execute upon subsystem request.
+
+The command
+\fBsftp-server\fP
+implements the SFTP file transfer subsystem.
+
+Alternately the name
+\fBinternal-sftp\fP
+implements an in-process SFTP server.
+This may simplify configurations using
+\fBChrootDirectory\fP
+to force a different filesystem root on clients.
+
+By default no subsystems are defined.
+.TP
+\fBSyslogFacility\fP
+Gives the facility code that is used when logging messages from
+\fBsshd\fP(8).
+The possible values are: DAEMON, USER, AUTH, LOCAL0, LOCAL1, LOCAL2,
+LOCAL3, LOCAL4, LOCAL5, LOCAL6, LOCAL7.
+The default is AUTH.
+.TP
+\fBTCPKeepAlive\fP
+Specifies whether the system should send TCP keepalive messages to the
+other side.
+If they are sent, death of the connection or crash of one
+of the machines will be properly noticed.
+However, this means that
+connections will die if the route is down temporarily, and some people
+find it annoying.
+On the other hand, if TCP keepalives are not sent,
+sessions may hang indefinitely on the server, leaving
+Qq ghost
+users and consuming server resources.
+
+The default is
+\fByes\fP
+(to send TCP keepalive messages), and the server will notice
+if the network goes down or the client host crashes.
+This avoids infinitely hanging sessions.
+
+To disable TCP keepalive messages, the value should be set to
+\fBno\fP.
+.TP
+\fBTrustedUserCAKeys\fP
+Specifies a file containing public keys of certificate authorities that are
+trusted to sign user certificates for authentication, or
+\fBnone\fP
+to not use one.
+Keys are listed one per line; empty lines and comments starting with
+`#'
+are allowed.
+If a certificate is presented for authentication and has its signing CA key
+listed in this file, then it may be used for authentication for any user
+listed in the certificate's principals list.
+Note that certificates that lack a list of principals will not be permitted
+for authentication using
+\fBTrustedUserCAKeys\fP.
+For more details on certificates, see the CERTIFICATES section in
+\fBssh-keygen\fP(1).
+.TP
+\fBUseDNS\fP
+Specifies whether
+\fBsshd\fP(8)
+should look up the remote host name, and to check that
+the resolved host name for the remote IP address maps back to the
+very same IP address.
+
+If this option is set to
+\fBno\fP
+(the default) then only addresses and not host names may be used in
+\fI~/.ssh/authorized_keys\fP
+\fBfrom\fP
+and
+\fBsshd_config\fP
+\fBMatch\fP
+\fBHost\fP
+directives.
+.TP
+\fBUsePAM\fP
+Enables the Pluggable Authentication Module interface.
+If set to
+\fByes\fP
+this will enable PAM authentication using
+\fBChallengeResponseAuthentication\fP
+and
+\fBPasswordAuthentication\fP
+in addition to PAM account and session module processing for all
+authentication types.
+
+Because PAM challenge-response authentication usually serves an equivalent
+role to password authentication, you should disable either
+\fBPasswordAuthentication\fP
+or
+\fBChallengeResponseAuthentication.\fP
+
+If
+\fBUsePAM\fP
+is enabled, you will not be able to run
+\fBsshd\fP(8)
+as a non-root user.
+The default is
+\fBno\fP.
+.TP
+\fBVersionAddendum\fP
+Optionally specifies additional text to append to the SSH protocol banner
+sent by the server upon connection.
+The default is
+\fBnone\fP.
+.TP
+\fBX11DisplayOffset\fP
+Specifies the first display number available for
+\fBsshd\fP(8)Ns 's
+X11 forwarding.
+This prevents sshd from interfering with real X11 servers.
+The default is 10.
+.TP
+\fBX11Forwarding\fP
+Specifies whether X11 forwarding is permitted.
+The argument must be
+\fByes\fP
+or
+\fBno\fP.
+The default is
+\fBno\fP.
+
+When X11 forwarding is enabled, there may be additional exposure to
+the server and to client displays if the
+\fBsshd\fP(8)
+proxy display is configured to listen on the wildcard address (see
+\fBX11UseLocalhost\fP),
+though this is not the default.
+Additionally, the authentication spoofing and authentication data
+verification and substitution occur on the client side.
+The security risk of using X11 forwarding is that the client's X11
+display server may be exposed to attack when the SSH client requests
+forwarding (see the warnings for
+\fBForwardX11\fP
+in
+\fBssh_config\fP(5)) .
+A system administrator may have a stance in which they want to
+protect clients that may expose themselves to attack by unwittingly
+requesting X11 forwarding, which can warrant a
+\fBno\fP
+setting.
+
+Note that disabling X11 forwarding does not prevent users from
+forwarding X11 traffic, as users can always install their own forwarders.
+.TP
+\fBX11UseLocalhost\fP
+Specifies whether
+\fBsshd\fP(8)
+should bind the X11 forwarding server to the loopback address or to
+the wildcard address.
+By default,
+sshd binds the forwarding server to the loopback address and sets the
+hostname part of the
+.IR DISPLAY
+environment variable to
+\fBlocalhost\fP.
+This prevents remote hosts from connecting to the proxy display.
+However, some older X11 clients may not function with this
+configuration.
+\fBX11UseLocalhost\fP
+may be set to
+\fBno\fP
+to specify that the forwarding server should be bound to the wildcard
+address.
+The argument must be
+\fByes\fP
+or
+\fBno\fP.
+The default is
+\fByes\fP.
+.TP
+\fBXAuthLocation\fP
+Specifies the full pathname of the
+\fBxauth\fP(1)
+program, or
+\fBnone\fP
+to not use one.
+The default is
+\fI/data/data/com.termux/files/usr/bin/xauth\fP.
+.SH TIME FORMATS
+\fBsshd\fP(8)
+command-line arguments and configuration file options that specify time
+may be expressed using a sequence of the form:
+\fItime\fP[\fIqualifier\fP,]
+where
+\fItime\fP
+is a positive integer value and
+\fIqualifier\fP
+is one of the following:
+
+.TP
+<\fBnone\fP>
+seconds
+.TP
+\fBs\fP | \fBS\fP
+seconds
+.TP
+\fBm\fP | \fBM\fP
+minutes
+.TP
+\fBh\fP | \fBH\fP
+hours
+.TP
+\fBd\fP | \fBD\fP
+days
+.TP
+\fBw\fP | \fBW\fP
+weeks
+
+Each member of the sequence is added together to calculate
+the total time value.
+
+Time format examples:
+
+.TP
+600
+600 seconds (10 minutes)
+.TP
+10m
+10 minutes
+.TP
+1h30m
+1 hour 30 minutes (90 minutes)
+.SH TOKENS
+Arguments to some keywords can make use of tokens,
+which are expanded at runtime:
+
+.TP
+%%
+A literal
+`%'.
+.TP
+\&%D
+The routing domain in which the incoming connection was received.
+.TP
+%F
+The fingerprint of the CA key.
+.TP
+%f
+The fingerprint of the key or certificate.
+.TP
+%h
+The home directory of the user.
+.TP
+%i
+The key ID in the certificate.
+.TP
+%K
+The base64-encoded CA key.
+.TP
+%k
+The base64-encoded key or certificate for authentication.
+.TP
+%s
+The serial number of the certificate.
+.TP
+\&%T
+The type of the CA key.
+.TP
+%t
+The key or certificate type.
+.TP
+%u
+The username.
+
+\fBAuthorizedKeysCommand\fP
+accepts the tokens %%, %f, %h, %k, %t, and %u.
+
+\fBAuthorizedKeysFile\fP
+accepts the tokens %%, %h, and %u.
+
+\fBAuthorizedPrincipalsCommand\fP
+accepts the tokens %%, %F, %f, %h, %i, %K, %k, %s, %T, %t, and %u.
+
+\fBAuthorizedPrincipalsFile\fP
+accepts the tokens %%, %h, and %u.
+
+\fBChrootDirectory\fP
+accepts the tokens %%, %h, and %u.
+
+\fBRoutingDomain\fP
+accepts the token %D.
+.SH FILES
+.TP
+.B /data/data/com.termux/files/usr/etc/ssh/sshd_config
+Contains configuration data for
+\fBsshd\fP(8).
+This file should be writable by root only, but it is recommended
+(though not necessary) that it be world-readable.
+.SH SEE ALSO
+\fBsftp-server\fP(8),
+\fBsshd\fP(8)
+.SH AUTHORS
+
+-nosplit
+OpenSSH is a derivative of the original and free
+ssh 1.2.12 release by
+
+Tatu Ylonen .
+
+Aaron Campbell , Bob Beck , Markus Friedl , Niels Provos ,
+
+Theo de Raadt
+and
+
+Dug Song
+removed many bugs, re-added newer features and
+created OpenSSH.
+
+Markus Friedl
+contributed the support for SSH protocol versions 1.5 and 2.0.
+
+Niels Provos
+and
+
+Markus Friedl
+contributed support for privilege separation.

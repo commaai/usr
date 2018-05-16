@@ -1,0 +1,15 @@
+38aba86a169f011522fd0710f763ace7  data/data/com.termux/files/usr/share/man/man1/dpkg.1
+a43414ce6a8a978d0d37c95def3a4d7c  data/data/com.termux/files/usr/share/man/man1/dpkg-genbuildinfo.1
+fa89fe258da006c519849cfb8a0db63c  data/data/com.termux/files/usr/share/man/man1/dpkg-query.1
+54b74c088e1275fa20b3fd49990c4b8c  data/data/com.termux/files/usr/share/man/man1/dpkg-split.1
+55abeecfd38d51cdca4318e13980816a  data/data/com.termux/files/usr/share/man/man1/dpkg-divert.1
+97a053e9f5a6dd72a8b391bcb94fa403  data/data/com.termux/files/usr/share/man/man1/dpkg-deb.1
+1507638a2e81f2ee250bc21326a7e3c5  data/data/com.termux/files/usr/share/man/man1/dpkg-trigger.1
+c1cf877431db00eb0d3d0695ba5671c9  data/data/com.termux/files/usr/share/man/man7/deb-version.7
+fe83f5f385d4b0c2231b08964800be5a  data/data/com.termux/files/usr/bin/dpkg-divert
+a38efe6a8c1fe597bd51c50d855da63f  data/data/com.termux/files/usr/bin/dpkg
+e9542e1ce25954e77b19f56244a4b06e  data/data/com.termux/files/usr/bin/dpkg-split
+3f342a8aef6bd8c81c29eead626adcef  data/data/com.termux/files/usr/bin/dpkg-genbuildinfo
+23abce99135cf852a8cd40c67a37aeb4  data/data/com.termux/files/usr/bin/dpkg-trigger
+b186e2af33cc7d96233fafcc53423559  data/data/com.termux/files/usr/bin/dpkg-query
+13731eb62cfd2ec0ab4de81a270ef5bb  data/data/com.termux/files/usr/bin/dpkg-deb

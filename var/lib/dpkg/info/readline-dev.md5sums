@@ -1,0 +1,11 @@
+d500eb1d4aa53715a6aa25452ee04bc5  data/data/com.termux/files/usr/share/man/man3/history.3
+5bfc235853f78aae00e0f52e1ccef709  data/data/com.termux/files/usr/share/man/man3/readline.3
+fc4a3b9f5ddb882a2641ddacc59014c5  data/data/com.termux/files/usr/lib/pkgconfig/readline.pc
+ac11f9c23396f94e01b2e68754d6cbec  data/data/com.termux/files/usr/include/readline/history.h
+f8070ceeffc2364fb6a943f6f68a5e58  data/data/com.termux/files/usr/include/readline/keymaps.h
+bd8ee3335e7c5fa83bbc703152419a13  data/data/com.termux/files/usr/include/readline/rlstdc.h
+e85d8674bf55b51d65824c36c6dea75a  data/data/com.termux/files/usr/include/readline/rlconf.h
+02120f1e3b60238eff5541ba539dc8bc  data/data/com.termux/files/usr/include/readline/chardefs.h
+e194e93b2d732981066cafa2f0a47b4f  data/data/com.termux/files/usr/include/readline/rltypedefs.h
+4b810af2c83168d3cd86815a6bbeaaff  data/data/com.termux/files/usr/include/readline/tilde.h
+a328254c2678d0d5edecd1bb1db4c798  data/data/com.termux/files/usr/include/readline/readline.h

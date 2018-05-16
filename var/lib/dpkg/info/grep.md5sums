@@ -1,0 +1,6 @@
+76e7afb31eb324e5c821a8cb84e639b2  data/data/com.termux/files/usr/share/man/man1/grep.1
+c5cd9ff03c9500a8afc209529dfaa92d  data/data/com.termux/files/usr/share/man/man1/egrep.1
+c5cd9ff03c9500a8afc209529dfaa92d  data/data/com.termux/files/usr/share/man/man1/fgrep.1
+a36033a8f93ed32e4500f6760b9f5e2c  data/data/com.termux/files/usr/bin/grep
+9718edc519ea2b679a097034af52ce70  data/data/com.termux/files/usr/bin/fgrep
+b73611bb9bbf628dc81010b2cab5b900  data/data/com.termux/files/usr/bin/egrep

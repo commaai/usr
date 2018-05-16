@@ -1,0 +1,12 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/share
+/data/data/com.termux/files/usr/share/man
+/data/data/com.termux/files/usr/share/man/man5
+/data/data/com.termux/files/usr/share/man/man5/editrc.5
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/libedit.so

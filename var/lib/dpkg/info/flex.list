@@ -1,0 +1,17 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/share
+/data/data/com.termux/files/usr/share/man
+/data/data/com.termux/files/usr/share/man/man1
+/data/data/com.termux/files/usr/share/man/man1/flex.1
+/data/data/com.termux/files/usr/bin
+/data/data/com.termux/files/usr/bin/flex
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/libfl.so
+/data/data/com.termux/files/usr/include
+/data/data/com.termux/files/usr/include/FlexLexer.h
+/data/data/com.termux/files/usr/bin/flex++

@@ -1,0 +1,14 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=${prefix}
+libdir=/data/data/com.termux/files/usr/lib
+includedir=/data/data/com.termux/files/usr/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 57.107.100
+Requires: 
+Requires.private: libswresample >= 2.9.100, libavutil >= 55.78.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -L/data/data/com.termux/files/usr/lib -lgnutls -liconv -lxvidcore -L/data/data/com.termux/files/usr/lib -lx265 -L/data/data/com.termux/files/usr/lib -lx264 -L/data/data/com.termux/files/usr/lib -lvpx -lm -L/data/data/com.termux/files/usr/lib -lvpx -lm -L/data/data/com.termux/files/usr/lib -lvpx -lm -L/data/data/com.termux/files/usr/lib -lvpx -lm -L/data/data/com.termux/files/usr/lib -lvorbisenc -L/data/data/com.termux/files/usr/lib -lvorbis -lsoxr -L/data/data/com.termux/files/usr/lib -lopus -L/data/data/com.termux/files/usr/lib -lopus -lmp3lame -L/data/data/com.termux/files/usr/lib -lgnutls -lm -lbz2 -lz -pthread -pthread -landroid-glob
+Cflags: -I${includedir}

@@ -1,0 +1,3 @@
+# The main termux repository:
+deb [arch=all,aarch64] https://termux.net stable main
+deb https://its-pointless.github.io/files/ termux extras

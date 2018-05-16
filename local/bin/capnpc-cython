@@ -1,0 +1,10 @@
+#!/usr/local/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'pycapnp==0.6.3','console_scripts','capnpc-cython'
+__requires__ = 'pycapnp==0.6.3'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('pycapnp==0.6.3', 'console_scripts', 'capnpc-cython')()
+    )

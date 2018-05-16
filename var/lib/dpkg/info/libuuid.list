@@ -1,0 +1,10 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/libuuid.so.1.0.0
+/data/data/com.termux/files/usr/lib/libuuid.so.1
+/data/data/com.termux/files/usr/lib/libuuid.so

@@ -1,0 +1,284 @@
+Package: libcurl
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libmpfr
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libbz2
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: openssl
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libexpat
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libgmp
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: binutils
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libmpc
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: jsoncpp
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libevent
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: vim-runtime
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libarchive
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: ndk-stl
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: pcre
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libxml2
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libutil
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: ca-certificates
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libandroid-support-dev
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: ldns
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: less
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libffi
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: m4
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: autoconf
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: perl
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libjpeg-turbo
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libsqlite
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: apr
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libuuid
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: apr-util
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: serf
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libvorbis
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: ffmpeg
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libmp3lame
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libogg
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libx264
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: xvidcore
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libpng
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: glib
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libltdl
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libpcap
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: xz-utils
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libpixman
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: fontconfig
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libcairo
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: pcre-dev
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libxml2-dev
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libunistring
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: gettext
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libcroco
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libedit
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libc++
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libpopt
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libllvm
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libidn
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libsoxr
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: pcre2
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libuv
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: liblua
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: liblz4
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libgnutls
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: termux-am
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libopus
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libx265
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libvpx
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: utf8proc
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: gpgv
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libnettle
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: librhash
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libnghttp2
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: termux-exec
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libandroid-glob
+Architecture: aarch64
+Auto-Installed: 1
+

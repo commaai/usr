@@ -1,0 +1,16 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/share
+/data/data/com.termux/files/usr/share/man
+/data/data/com.termux/files/usr/share/man/man1
+/data/data/com.termux/files/usr/share/man/man1/grep.1
+/data/data/com.termux/files/usr/share/man/man1/egrep.1
+/data/data/com.termux/files/usr/share/man/man1/fgrep.1
+/data/data/com.termux/files/usr/bin
+/data/data/com.termux/files/usr/bin/grep
+/data/data/com.termux/files/usr/bin/fgrep
+/data/data/com.termux/files/usr/bin/egrep

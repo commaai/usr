@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pypytools
+Version: 0.4.3
+Summary: A collection of useful tools to use PyPy-specific features, with CPython fallbacks
+Home-page: http://bitbucket.org/antocuni/pypytools/
+Author: Antonio Cuni
+Author-email: anto.cuni@gmail.com
+License: MIT X11 style
+Description: A collection of useful tools to use PyPy-specific features, with CPython fallbacks
+Platform: UNKNOWN

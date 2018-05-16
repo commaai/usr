@@ -1,0 +1,8 @@
+f10ed2bb5750af820eb04b25e536ffec  data/data/com.termux/files/usr/share/gnupg/FAQ
+4fe17155746e9b1d6e67da0206ae1762  data/data/com.termux/files/usr/share/gnupg/options.skel
+67626294b67a64c4720661852aa16d08  data/data/com.termux/files/usr/share/man/man1/gpg.1
+aa2d6a71686169be496c2f9f8ec7625c  data/data/com.termux/files/usr/share/man/man1/gpg-zip.1
+03ca2392c5e719c73fb6727056aaf441  data/data/com.termux/files/usr/bin/gpg
+8b619fb5d14fe3ad26146ed924357c25  data/data/com.termux/files/usr/bin/gpg-zip
+f951062e95152935e3a5ee51aa1e008e  data/data/com.termux/files/usr/bin/gpgsplit
+e16e8d9ee29e1bcb0b1a8683a2aea5fe  data/data/com.termux/files/usr/libexec/gnupg/gpgkeys_finger

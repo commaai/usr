@@ -1,0 +1,7 @@
+21193f552eae8d28b27c6a7cf29d15d0  data/data/com.termux/files/usr/lib/pkgconfig/libturbojpeg.pc
+dbcbc788535419b088ae4f21d0e60204  data/data/com.termux/files/usr/lib/pkgconfig/libjpeg.pc
+366bf0b5daa21c7bc6a511d4d78d8f5f  data/data/com.termux/files/usr/include/jmorecfg.h
+a051dac46de5c89ffaa42bc0b0c143ac  data/data/com.termux/files/usr/include/jpeglib.h
+2a6ef4964b52a4dee3953859aa0160ed  data/data/com.termux/files/usr/include/jerror.h
+2e698b637ef695ddbc4bb6ba59c94beb  data/data/com.termux/files/usr/include/jconfig.h
+3a3a9e174d2500948f176565c8284a7e  data/data/com.termux/files/usr/include/turbojpeg.h

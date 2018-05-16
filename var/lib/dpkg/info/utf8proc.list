@@ -1,0 +1,10 @@
+/.
+/data
+/data/data
+/data/data/com.termux
+/data/data/com.termux/files
+/data/data/com.termux/files/usr
+/data/data/com.termux/files/usr/lib
+/data/data/com.termux/files/usr/lib/libutf8proc.so.2.1.1
+/data/data/com.termux/files/usr/lib/libutf8proc.so.2
+/data/data/com.termux/files/usr/lib/libutf8proc.so
