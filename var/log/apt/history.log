@@ -302,3 +302,8 @@ Start-Date: 2018-05-16  13:22:51
 Commandline: apt autoremove
 Remove: gnutls:aarch64 (3.5.18-1)
 End-Date: 2018-05-16  13:22:51
+
+Start-Date: 2018-05-17  11:12:57
+Commandline: apt install llvm
+Install: llvm:aarch64 (6.0.0-2)
+End-Date: 2018-05-17  11:12:58

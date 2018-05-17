@@ -681,6 +681,16 @@ Depends: liblzma
 Description: Library for parsing XML documents
 Homepage: http://www.xmlsoft.org
 
+Package: llvm
+Status: install ok installed
+Installed-Size: 7356
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 6.0.0-2
+Depends: libllvm
+Description: C language frontend for LLVM
+Homepage: https://clang.llvm.org/
+
 Package: libxml2-dev
 Status: install ok installed
 Installed-Size: 624
