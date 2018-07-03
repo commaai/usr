@@ -276,6 +276,7 @@ else:
             self.requestQueue = queue.Queue(0)
             self.resultsQueue = queue.Queue(0)
 
+            """
             try:
                 prev_size = threading.stack_size(stack_size*1024) 
             except AttributeError as e:
@@ -288,6 +289,7 @@ else:
             except ValueError as e:
                 msg = "Setting stack size failed:\n    " + str(e)
                 SCons.Warnings.warn(SCons.Warnings.StackSizeWarning, msg)
+            """
 
             # Create worker threads
             self.workers = []
@@ -295,8 +297,8 @@ else:
                 worker = Worker(self.requestQueue, self.resultsQueue, interrupted)
                 self.workers.append(worker)
 
-            if 'prev_size' in locals():
-                threading.stack_size(prev_size)
+            #if 'prev_size' in locals():
+            #    threading.stack_size(prev_size)
 
         def put(self, task):
             """Put task into request queue."""
