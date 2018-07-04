@@ -307,3 +307,13 @@ Start-Date: 2018-05-17  11:12:57
 Commandline: apt install llvm
 Install: llvm:aarch64 (6.0.0-2)
 End-Date: 2018-05-17  11:12:58
+
+Start-Date: 2018-07-04  11:58:54
+Commandline: apt install libxslt
+Install: libgcrypt:aarch64 (1.8.3, automatic), libxslt:aarch64 (1.1.32), libgpg-error:aarch64 (1.31, automatic)
+End-Date: 2018-07-04  11:58:55
+
+Start-Date: 2018-07-04  11:59:01
+Commandline: apt install libxslt-dev
+Install: libxslt-dev:aarch64 (1.1.32)
+End-Date: 2018-07-04  11:59:01

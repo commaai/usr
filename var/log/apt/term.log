@@ -1289,3 +1289,27 @@ Preparing to unpack .../llvm_6.0.0-2_aarch64.deb ...
 Unpacking llvm (6.0.0-2) ...
 Setting up llvm (6.0.0-2) ...
 Log ended: 2018-05-17  11:12:58
+
+Log started: 2018-07-04  11:58:54
+Selecting previously unselected package libgpg-error.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11935 files and directories currently installed.)
+Preparing to unpack .../libgpg-error_1.31_aarch64.deb ...
+Unpacking libgpg-error (1.31) ...
+Selecting previously unselected package libgcrypt.
+Preparing to unpack .../libgcrypt_1.8.3_aarch64.deb ...
+Unpacking libgcrypt (1.8.3) ...
+Selecting previously unselected package libxslt.
+Preparing to unpack .../libxslt_1.1.32_aarch64.deb ...
+Unpacking libxslt (1.1.32) ...
+Setting up libgpg-error (1.31) ...
+Setting up libgcrypt (1.8.3) ...
+Setting up libxslt (1.1.32) ...
+Log ended: 2018-07-04  11:58:55
+
+Log started: 2018-07-04  11:59:01
+Selecting previously unselected package libxslt-dev.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11951 files and directories currently installed.)
+Preparing to unpack .../libxslt-dev_1.1.32_aarch64.deb ...
+Unpacking libxslt-dev (1.1.32) ...
+Setting up libxslt-dev (1.1.32) ...
+Log ended: 2018-07-04  11:59:01

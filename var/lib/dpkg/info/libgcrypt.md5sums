@@ -1,0 +1,6 @@
+550b53703cae55bf016403af66ea75d6  data/data/com.termux/files/usr/share/man/man1/hmac256.1
+f91fc38c2607723c6b7c9f20a7a6ba1c  data/data/com.termux/files/usr/bin/hmac256
+bfa864d860369fcdcfa7c8a459271cf0  data/data/com.termux/files/usr/bin/libgcrypt-config
+0d88ca1009521521477ace059edec1ce  data/data/com.termux/files/usr/bin/dumpsexp
+ebfe8bc3780fc686ca38f6e219ca3a8b  data/data/com.termux/files/usr/bin/mpicalc
+73287e9731b9cae7c69469a7c772aa8c  data/data/com.termux/files/usr/lib/libgcrypt.so

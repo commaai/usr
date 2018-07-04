@@ -178,10 +178,6 @@ Package: pcre-dev
 Architecture: aarch64
 Auto-Installed: 1
 
-Package: libxml2-dev
-Architecture: aarch64
-Auto-Installed: 1
-
 Package: libunistring
 Architecture: aarch64
 Auto-Installed: 1
@@ -279,6 +275,14 @@ Architecture: aarch64
 Auto-Installed: 1
 
 Package: libandroid-glob
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libgcrypt
+Architecture: aarch64
+Auto-Installed: 1
+
+Package: libgpg-error
 Architecture: aarch64
 Auto-Installed: 1
 

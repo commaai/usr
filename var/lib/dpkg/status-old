@@ -431,6 +431,16 @@ Version: 2.2.5
 Description: XML parsing C library
 Homepage: https://libexpat.github.io/
 
+Package: libxslt-dev
+Status: install ok unpacked
+Installed-Size: 268
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.1.32
+Depends: libxslt, libxml2-dev
+Description: Development files for libxslt
+Homepage: http://xmlsoft.org/libxslt/
+
 Package: libltdl
 Status: install ok installed
 Installed-Size: 60
@@ -450,6 +460,16 @@ Architecture: aarch64
 Version: 0.5.10
 Description: Small POSIX-compliant implementation of /bin/sh
 Homepage: http://gondor.apana.org.au/~herbert/dash/
+
+Package: libxslt
+Status: install ok installed
+Installed-Size: 308
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.1.32
+Depends: libxml2, libgcrypt
+Description: XSLT processing library
+Homepage: http://xmlsoft.org/libxslt/
 
 Package: pcre
 Status: install ok installed
@@ -671,6 +691,15 @@ Depends: glib
 Description: Programs for the GLib library
 Homepage: https://developer.gnome.org/glib/
 
+Package: libgpg-error
+Status: install ok installed
+Installed-Size: 252
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.31
+Description: Small library that defines common error values for all GnuPG components
+Homepage: https://www.gnupg.org/related_software/libgpg-error/
+
 Package: libxml2
 Status: install ok installed
 Installed-Size: 1144
@@ -682,7 +711,7 @@ Description: Library for parsing XML documents
 Homepage: http://www.xmlsoft.org
 
 Package: llvm
-Status: install ok unpacked
+Status: install ok installed
 Installed-Size: 7356
 Maintainer: Fredrik Fornwall @fornwall
 Architecture: aarch64
@@ -1068,6 +1097,16 @@ Version: 2.2.0-1
 Depends: ncurses, libandroid-support
 Description: Interactive process viewer for Linux
 Homepage: https://hisham.hm/htop/
+
+Package: libgcrypt
+Status: install ok installed
+Installed-Size: 744
+Maintainer: Fredrik Fornwall @fornwall
+Architecture: aarch64
+Version: 1.8.3
+Depends: libgpg-error
+Description: General purpose cryptographic library based on the code from GnuPG
+Homepage: https://www.gnu.org/software/libgcrypt/
 
 Package: pcre-dev
 Status: install ok installed
